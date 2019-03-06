@@ -19,6 +19,11 @@ twitter:
   username: 'jsthornquest'
   card: 'summary'
 
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
 # Plugins
 plugins:
   - jekyll-feed
