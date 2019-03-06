@@ -26,6 +26,7 @@ sass:
 
 # Plugins
 plugins:
+  - jekyll-assets
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
