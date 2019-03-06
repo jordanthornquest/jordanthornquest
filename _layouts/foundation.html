@@ -31,7 +31,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
     <!-- Critical -->
-    {% include critical.html %}
+    <style type="text/css">
+      {% capture criticalcss %}
+        {% include critical.scss %}
+      {% endcapture %}
+      {{ criticalcss | scssify }}
+    </style>
     <meta name="theme-color" content="#fafafa">
     {% seo %}
   </head>
