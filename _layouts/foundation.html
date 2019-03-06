@@ -31,6 +31,8 @@
     <!-- CSS -->
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
     <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!-- Critical -->
+    {% include critical.html %}
     <meta name="theme-color" content="#fafafa">
     {% seo %}
   </head>
@@ -41,5 +43,20 @@
 
     {{ content }}
 
+    <!-- Scripts -->
+    <script>
+      WebFontConfig = {
+        google: {
+          families: ['Merriweather:400,400i,700,700i']
+        }
+      };
+
+      (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+      })(document);
+    </script>
   </body>
 </html>
