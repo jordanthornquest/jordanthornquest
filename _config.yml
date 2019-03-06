@@ -1,6 +1,24 @@
-title: 'Jordan Thornquest'
+# Site Info
+author:
+  twitter: 'jsthornquest'
 description: 'So far out of the box, but not so far out of my mind.'
+lang: 'en_US'
 timezone: 'America/Boise'
+title: 'Jordan Thornquest'
+url: 'https://jordanthornquest.com'
 
+# Social
+logo: 'apple-touch-icon.png'
+social:
+  name: 'Jordan Thornquest'
+  links:
+    - https://instagram.com/jordanthornquest
+    - https://music.jordanthornquest.com
+    - https://twitter.com/jsthornquest
+twitter:
+  username: 'jsthornquest'
+  card: 'summary'
+
+# Plugins
 plugins:
   - jekyll-seo-tag
