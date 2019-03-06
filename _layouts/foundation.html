@@ -33,10 +33,10 @@ layout: compress
     <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
     <!-- Critical -->
     <style type="text/css">
-      {% capture criticalcss %}
-        {% include critical.scss %}
+      {% capture stylecss %}
+        {% include style.scss %}
       {% endcapture %}
-      {{ criticalcss | scssify }}
+      {{ stylecss | scssify }}
     </style>
     <meta name="theme-color" content="#fafafa">
     {% seo %}
