@@ -1,3 +1,6 @@
-timezone: 'America/Boise'
 title: 'Jordan Thornquest'
 description: 'So far out of the box, but not so far out of my mind.'
+timezone: 'America/Boise'
+
+plugins:
+  - jekyll-seo-tag
