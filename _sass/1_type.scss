@@ -1,8 +1,29 @@
-/* Type */
+/*------------------------------------*\
+  # Font Families
+\*------------------------------------*/
 
-body {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+dl,
+dd,
+dt,
+blockquote,
+strong,
+em,
+p {
   font-family: 'Merriweather', serif;
 }
+
+/*------------------------------------*\
+  # Headings
+\*------------------------------------*/
 
 h1,
 h2,
@@ -10,11 +31,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Merriweather', serif;
   font-weight: 700;
 }
 
+/*------------------------------------*\
+  # Paragraphs
+\*------------------------------------*/
+
 p {
-  font-family: 'Merriweather', serif;
   font-weight: 400;
 }
