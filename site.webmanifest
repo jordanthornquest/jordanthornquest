@@ -2,9 +2,9 @@
   "short_name": "Jordan Thornquest",
   "name": "Jordan Thornquest",
   "icons": [{
-    "src": "icon.png",
+    "src": "apple-touch-icon.png",
     "type": "image/png",
-    "sizes": "192x192"
+    "sizes": "200x200"
   }],
   "start_url": "/?utm_source=homescreen",
   "background_color": "#fafafa",
