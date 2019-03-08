@@ -1,4 +1,17 @@
 /*------------------------------------*\
+  # REM, Baby
+\*------------------------------------*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+/*------------------------------------*\
   # Font Families
 \*------------------------------------*/
 
@@ -34,10 +47,76 @@ h6 {
   font-weight: 700;
 }
 
+h1 {
+  font-size: 35px;
+  font-size: 3.5rem;
+  margin: 3rem 0 2rem;
+}
+
+h2 {
+  font-size: 25px;
+  font-size: 2.5rem;
+  margin: 2.5rem 0 2rem;
+}
+
 /*------------------------------------*\
   # Paragraphs
 \*------------------------------------*/
 
+p,
+em,
+strong {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+
 p {
   font-weight: 400;
+  margin: 0 0 2rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/*------------------------------------*\
+  # Anchors
+\*------------------------------------*/
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #F59134;
+  text-decoration: none;
+}
+
+/*------------------------------------*\
+  # Lists
+\*------------------------------------*/
+
+ul,
+li {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  list-style-position: outside;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }
