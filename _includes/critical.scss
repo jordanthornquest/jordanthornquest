@@ -1,26 +1,44 @@
+/*------------------------------------*\
+  # Core Site Layout
+\*------------------------------------*/
+
 body {
   background-color: #000;
   color: #eee;
-  padding-bottom: 30px;
 }
 
+header,
+nav,
 main,
-nav {
+footer {
   display: block;
   margin: 0 auto;
-  max-width: 550px;
+  max-width: 600px;
   padding: 0 30px;
 }
 
-img {
+/*------------------------------------*\
+  # Site Navigation
+\*------------------------------------*/
+
+header {
+  padding-top: 30px;
+  text-align: center;
+}
+
+header img {
   display: block;
-  margin: 3rem 0;
-  max-width: 150px;
+  margin: 0 auto 1rem;
+  max-width: 100px;
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  img {
-    max-width: 250px;
-  }
+header small {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 24px;
+  font-size: 2.4rem;
 }
