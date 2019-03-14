@@ -3,4 +3,23 @@ layout: home
 title: 'Home'
 description: 'So far out of the box, but not so far out of my mind.'
 image: 'https://res.cloudinary.com/deedobzcr/image/upload/v1552025009/2F83F610-9B7E-4208-A770-FEBA09010D8F.jpg'
+css: 'home.scss'
 ---
+
+<section class="current-projects">
+  <h2>Current Projects</h2>
+  {% for item in site.home_list %}
+    <article class="home-list-item">
+      <img alt="{{ item.img-alt }}" class="lazyload" data-src="{{ item.image }}"/>
+      <section>
+        <h3>{{ item.title }}</h3>
+        {{ item.content | markdownify }}
+        <ul>
+          {% for link in item.links %}
+            <li><a href="{{ link.url }}"><i class="fab fa-{{ link.icon }}"></i><span class="sr-only">{{ link.title }}</span></a></li>
+          {% endfor %}
+        </ul>
+      </section>
+    </article>
+  {% endfor %} 
+</section>
