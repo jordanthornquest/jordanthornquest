@@ -1,3 +1,57 @@
-article {
-  background-color: red;
+/*------------------------------------*\
+  # Home Intro
+\*------------------------------------*/
+
+.home-intro {
+  margin-bottom: 4rem;
+}
+
+/*------------------------------------*\
+  # Home List
+\*------------------------------------*/
+
+.current-projects h2 {
+  margin-bottom: 3.5rem;
+}
+
+.home-list-item {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3rem;
+}
+
+.home-list-item img {
+  width: 25%;
+}
+
+.home-list-item section {
+  padding-right: 0;
+}
+
+.home-list-item h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.home-list-item p {
+  margin-bottom: 1rem;
+}
+
+.home-list-item ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.home-list-item ul li {
+  font-size: 24px;
+  font-size: 2.4rem;
+  margin-right: 1.5rem;
+}
+
+.home-list-item ul li:last-child {
+  margin-right: 0;
 }
