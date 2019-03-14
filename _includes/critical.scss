@@ -87,15 +87,15 @@ header nav ul {
   width: 100%;
 }
 
+header nav ul li:first-child {
+  margin: 0 0 0 auto;
+}
+
 header nav ul li {
-  margin: 0 auto;
+  margin: 0 0 0 1rem;
   font-size: 14px;
   font-size: 1.4rem;
   text-align: right;
-}
-
-header nav ul li:last-child {
-  margin-right: 0;
 }
 
 header nav ul li a {

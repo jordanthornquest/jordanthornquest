@@ -7,7 +7,7 @@
 }
 
 /*------------------------------------*\
-  # Home List
+  # Home List: Default
 \*------------------------------------*/
 
 .current-projects h2 {
@@ -18,15 +18,19 @@
   align-items: flex-start;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-bottom: 3rem;
 }
 
 .home-list-item img {
-  width: 25%;
+  margin: 0 0 3rem;
+  max-width: 300px;
+  width: 100%;
 }
 
 .home-list-item section {
-  padding-right: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .home-list-item h3 {
@@ -54,4 +58,23 @@
 
 .home-list-item ul li:last-child {
   margin-right: 0;
+}
+
+/*------------------------------------*\
+  # Home List: Medium & Up
+\*------------------------------------*/
+
+@media (min-width: 500px) {
+  .home-list-item {
+    flex-wrap: nowrap;
+  }
+
+  .home-list-item img {
+    width: 25%;
+  }
+
+  .home-list-item section {
+    padding-left: 30px;
+    width: auto;
+  }
 }
