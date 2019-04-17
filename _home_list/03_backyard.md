@@ -1,6 +1,6 @@
 ---
 img-alt: "A photo of Eli Stonemets, the mastermind behind Backyard Universe."
-image: "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto/v1552516788/6206E0E4-650A-45F8-AA17-1698523DCDA6.jpg"
+image: "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_600/v1552516788/6206E0E4-650A-45F8-AA17-1698523DCDA6.jpg"
 title: "Backyard Universe"
 links:
   - title: "Apple Music"

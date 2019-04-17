@@ -1,6 +1,6 @@
 ---
 img-alt: "Me & my buddy Chase playing guitar together on stage. We're both in Mains & Monitors."
-image: "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto/v1552280249/BD2F9D88-81E3-4114-B51D-C9BAF49EAAA3.jpg"
+image: "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_600/v1552280249/BD2F9D88-81E3-4114-B51D-C9BAF49EAAA3.jpg"
 title: "Mains & Monitors"
 links:
   - title: "Apple Music"
