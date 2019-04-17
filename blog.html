@@ -1,0 +1,17 @@
+---
+layout: blog
+title: 'Blog'
+description: 'Thoughts on music, creative process, dogs, and miscellany.'
+image: 'https://res.cloudinary.com/deedobzcr/image/upload/v1552025009/2F83F610-9B7E-4208-A770-FEBA09010D8F.jpg'
+css: 'blog.scss'
+---
+
+<section class="current-projects">
+  {% for post in site.posts %}
+    <article class="blog-list-item">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.preview-text }}</p>
+      <a href="{{ post.url }}">Read More</a>
+    </article>
+  {% endfor %} 
+</section>
