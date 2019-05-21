@@ -3,7 +3,53 @@
 \*------------------------------------*/
 
 .home-intro {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+}
+
+/*------------------------------------*\
+  # First Impressions
+\*------------------------------------*/
+
+.first-impressions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.first-impressions h2 {
+  flex-basis: 100%;
+  margin-bottom: 3.5rem;
+}
+
+.first-impressions h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+.first-impressions .writing {
+  flex-basis: 100%;
+  margin-bottom: 2rem;
+}
+
+.first-impressions .writing ul li {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+.first-impressions .music,
+.first-impressions .social {
+  flex-basis: 45%;
+}
+
+.first-impressions .music {
+  align-self: flex-start;
+}
+
+.first-impressions .social {
+  align-self: flex-end;
 }
 
 /*------------------------------------*\
@@ -44,19 +90,22 @@
   margin-bottom: 1rem;
 }
 
-.home-list-item ul {
+.home-list-item ul,
+.first-impressions ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
 }
 
-.home-list-item ul li {
+.home-list-item ul li,
+.first-impressions ul li {
   font-size: 24px;
   font-size: 2.4rem;
   margin-right: 1.5rem;
 }
 
-.home-list-item ul li:last-child {
+.home-list-item ul li:last-child,
+.first-impressions ul li:last-child {
   margin-right: 0;
 }
 
