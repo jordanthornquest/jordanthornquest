@@ -7,7 +7,7 @@
 }
 
 /*------------------------------------*\
-  # First Impressions
+  # First Impressions: Default
 \*------------------------------------*/
 
 .first-impressions {
@@ -29,8 +29,13 @@
   font-size: 2rem;
 }
 
-.first-impressions .writing {
+.first-impressions .writing,
+.first-impressions .music,
+.first-impressions .social {
   flex-basis: 100%;
+}
+
+.first-impressions .writing {
   margin-bottom: 2rem;
 }
 
@@ -39,17 +44,23 @@
   font-size: 1.6rem;
 }
 
-.first-impressions .music,
-.first-impressions .social {
-  flex-basis: 45%;
-}
+/*------------------------------------*\
+  # First Impressions: Default
+\*------------------------------------*/
 
-.first-impressions .music {
-  align-self: flex-start;
-}
+@media (min-width: 768px) {
+  .first-impressions .music,
+  .first-impressions .social {
+    flex-basis: 45%;
+  }
 
-.first-impressions .social {
-  align-self: flex-end;
+  .first-impressions .music {
+    align-self: flex-start;
+  }
+
+  .first-impressions .social {
+    align-self: flex-end;
+  }
 }
 
 /*------------------------------------*\
