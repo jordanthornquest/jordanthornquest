@@ -107,10 +107,8 @@ header .header-content nav ul li:first-child {
   # Site Content: Default
 \*------------------------------------*/
 
-@media (min-width: 768px) {
-  main section {
-    padding: 0 15px;
-  }
+main section {
+  padding: 0 15px;
 }
 
 /*------------------------------------*\
