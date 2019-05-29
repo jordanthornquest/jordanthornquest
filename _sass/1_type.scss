@@ -45,6 +45,8 @@ h4,
 h5,
 h6 {
   font-weight: 700;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 h1 {
@@ -87,6 +89,8 @@ strong {
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 2.75rem;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 p {
@@ -135,6 +139,12 @@ li {
   margin-top: 0;
   margin-bottom: 2rem;
   padding: 0;
+}
+
+ul {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 600px;
 }
 
 li {

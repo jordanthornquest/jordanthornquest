@@ -26,7 +26,7 @@ footer {
 }
 
 img {
-  display: inline-block;
+  display: block;
   height: 100%;
   margin: 0 auto;
   max-width: 700px;
@@ -111,22 +111,6 @@ header .header-content nav ul li:first-child {
   header .header-content {
     padding: 0 30px;
   }
-}
-
-/*------------------------------------*\
-  # Site Content: Default
-\*------------------------------------*/
-
-main > section > p,
-main > section > h1,
-main > section > h2,
-main > section > h3,
-main > section > h4,
-main > section > h5,
-main > section > h6 {
-  margin: 0 auto;
-  max-width: 600px;
-  padding: 0 15px;
 }
 
 /*------------------------------------*\
