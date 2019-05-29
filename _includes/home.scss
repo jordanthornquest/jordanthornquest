@@ -1,12 +1,4 @@
 /*------------------------------------*\
-  # Home Intro
-\*------------------------------------*/
-
-.home-intro {
-  margin-bottom: 2rem;
-}
-
-/*------------------------------------*\
   # First Impressions: Default
 \*------------------------------------*/
 
@@ -19,14 +11,17 @@
 
 .first-impressions h2 {
   flex-basis: 100%;
-  margin-bottom: 3.5rem;
 }
 
 .first-impressions h3 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+.first-impressions p {
+  margin-bottom: 1rem;
 }
 
 .first-impressions .writing,
