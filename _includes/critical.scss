@@ -70,6 +70,7 @@ header .header-content {
 }
 
 header .header-content img {
+  margin: 0;
   max-width: 55px;
   width: 100%;
 }
@@ -102,24 +103,13 @@ header .header-content nav ul li:first-child {
   margin-left: 0;
 }
 
-
 /*------------------------------------*\
-  # Site Navigation: Medium & Up
-\*------------------------------------*/
-
-@media (min-width: 768px) {  
-  header .header-content {
-    padding: 0 30px;
-  }
-}
-
-/*------------------------------------*\
-  # Site Content: Medium & Up
+  # Site Content: Default
 \*------------------------------------*/
 
 @media (min-width: 768px) {
-  main > section {
-    padding: 0 30px;
+  main section {
+    padding: 0 15px;
   }
 }
 
@@ -140,14 +130,4 @@ footer p {
   font-style: italic;
   margin: 0 auto;
   max-width: 600px;
-}
-
-/*------------------------------------*\
-  # Site Footer: Medium & Up
-\*------------------------------------*/
-
-@media (min-width: 768px) {
-  footer {
-    padding: 15px 30px;
-  }
 }
