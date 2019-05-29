@@ -6,7 +6,7 @@ image: 'https://res.cloudinary.com/deedobzcr/image/upload/v1552025009/2F83F610-9
 css: 'blog.scss'
 ---
 
-<section class="current-projects">
+<section class="blog-list">
   {% for post in site.posts %}
     <article class="blog-list-item">
       <time>{{ post.date | date_to_long_string: "ordinal", "US" }}</time>
