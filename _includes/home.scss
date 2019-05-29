@@ -52,6 +52,14 @@
   margin-right: 0;
 }
 
+
+.home-list-item ul li a,
+.first-impressions ul li a {
+  padding: 0;
+  margin: 0;
+  max-width: auto;
+}
+
 /*------------------------------------*\
   # First Impressions: Default
 \*------------------------------------*/
