@@ -2,10 +2,16 @@
   # Core Site Layout
 \*------------------------------------*/
 
+html,
+body {
+margin: 0;
+height: 100%;
+padding: 0;
+}
+
 body {
   background-color: #181C21;
   color: #eee;
-  min-height: 100vh;
 }
 
 header,
@@ -107,6 +113,10 @@ header .header-content nav ul li:first-child {
 /*------------------------------------*\
   # Site Content: Default
 \*------------------------------------*/
+
+main {
+  min-height: 100%;
+}
 
 main > section {
   margin: 0 auto;
