@@ -73,7 +73,7 @@ header .header-content nav p {
 
 header .header-content nav ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: row;
   list-style-type: none;
   margin-bottom: 0;
@@ -89,10 +89,6 @@ header .header-content nav ul li {
 
 header .header-content nav ul li:first-child {
   margin-left: 0;
-}
-
-header .header-content nav ul li:last-child {
-  margin-right: 0;
 }
 
 /*------------------------------------*\
