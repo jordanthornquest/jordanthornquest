@@ -10,7 +10,7 @@
 WebFontConfig = {
   google: {
     families: ['Merriweather:400,400i,700,700i'],
-    display: ['fallback']
+    display: ['swap']
   }
 };
 
