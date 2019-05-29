@@ -42,13 +42,14 @@ img {
 
 header {
   background-color: #32393A;
-  padding: 25px 0;
+  padding: 15px 0;
 }
 
 header .header-content {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 600px;
@@ -58,9 +59,6 @@ header .header-content {
 header .header-content img {
   max-width: 55px;
   width: 100%;
-}
-
-header .header-content nav {
 }
 
 header .header-content nav p {
