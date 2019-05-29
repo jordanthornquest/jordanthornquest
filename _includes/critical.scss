@@ -145,7 +145,8 @@ footer {
 
 footer p {
   font-style: italic;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 /*------------------------------------*\
@@ -154,6 +155,6 @@ footer p {
 
 @media (min-width: 768px) {
   footer {
-    padding: 30px;
+    padding: 15px 30px;
   }
 }
