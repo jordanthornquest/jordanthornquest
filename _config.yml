@@ -6,6 +6,7 @@ lang: 'en_US'
 timezone: 'America/Boise'
 title: 'Jordan Thornquest'
 url: 'https://jordanthornquest.com'
+permalink: '/:categories/:title/'
 
 # Social
 logo: 'https://res.cloudinary.com/deedobzcr/image/upload/v1552025009/2F83F610-9B7E-4208-A770-FEBA09010D8F.jpg'
