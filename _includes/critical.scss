@@ -12,8 +12,6 @@ section,
 footer {
   display: block;
   margin: 0 auto;
-  max-width: 600px;
-  padding: 0 30px;
 }
 
 img {
@@ -44,6 +42,7 @@ img {
 
 header {
   align-items: center;
+  background-color: #32393A;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -63,6 +62,8 @@ header nav {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0;
+  max-width: 600px;
+  padding: 0 30px;
   width: 75%;
 }
 
