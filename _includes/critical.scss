@@ -99,8 +99,14 @@ header nav ul li {
 }
 
 footer {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+footer hr {
+  color: #ccc;
+  margin: 0 2.5rem;
+  width: 100%;
 }
 
 footer p {
