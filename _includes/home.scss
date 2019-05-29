@@ -9,6 +9,13 @@
   justify-content: space-between;
 }
 
+
+.first-impressions .writing,
+.first-impressions .music,
+.first-impressions .social {
+  flex-basis: 100%;
+}
+
 .first-impressions h2 {
   flex-basis: 100%;
 }
@@ -24,23 +31,8 @@
   margin-bottom: 1rem;
 }
 
-.first-impressions .writing,
-.first-impressions .music,
-.first-impressions .social {
-  flex-basis: 100%;
-}
-
-.first-impressions .writing {
-  margin-bottom: 2rem;
-}
-
-.first-impressions .writing ul li {
-  font-size: 16px;
-  font-size: 1.6rem;
-}
-
 /*------------------------------------*\
-  # First Impressions: Default
+  # First Impressions: Medium & Up
 \*------------------------------------*/
 
 @media (min-width: 768px) {
