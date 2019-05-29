@@ -45,11 +45,12 @@ header {
 }
 
 header .header-content {
+  align-items: 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 2.5rem auto;
   max-width: 600px;
   padding: 0 30px;
 }
@@ -75,6 +76,7 @@ header .header-content nav ul {
   justify-content: center;
   flex-direction: row;
   list-style-type: none;
+  margin-bottom: 0;
   text-align: right;
 }
 
@@ -87,6 +89,10 @@ header .header-content nav ul li {
 
 header .header-content nav ul li:first-child {
   margin-left: 0;
+}
+
+header .header-content nav ul li:last-child {
+  margin-right: 0;
 }
 
 /*------------------------------------*\
