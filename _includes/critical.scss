@@ -104,11 +104,7 @@ header .header-content nav ul li:first-child {
   # Site Navigation: Medium & Up
 \*------------------------------------*/
 
-@media (min-width: 768px) {
-  header {
-    padding: 30px 0;
-  }
-  
+@media (min-width: 768px) {  
   header .header-content {
     padding: 0 30px;
   }
