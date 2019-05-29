@@ -9,7 +9,7 @@ css: 'blog.scss'
 <section class="current-projects">
   {% for post in site.posts %}
     <article class="blog-list-item">
-      <small>{{ post.date | date_to_long_string: "ordinal", "US" }}</small>
+      <time>{{ post.date | date_to_long_string: "ordinal", "US" }}</time>
       <h2>{{ post.title }}</h2>
       <p>{{ post.preview-text }}</p>
       <a href="{{ post.url }}">Read More</a>
