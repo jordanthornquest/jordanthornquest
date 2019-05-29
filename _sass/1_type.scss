@@ -97,13 +97,15 @@ h3 {
 
 p,
 em,
-strong {
+strong,
+time {
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 2.75rem;
 }
 
-p {
+p,
+time {
   font-weight: 400;
   margin: 0 auto 2rem;
   max-width: 600px;
@@ -123,6 +125,12 @@ strong {
   font-weight: 700;
 }
 
+time {
+  display: inline-block;
+  font-size: 80%;
+  text-transform: uppercase;
+}
+
 /*------------------------------------*\
   # Anchors
 \*------------------------------------*/
@@ -132,6 +140,18 @@ a:visited,
 a:hover,
 a:active {
   color: #52ABF1;
+  margin: 0 auto 2rem;
+  max-width: 600px;
+  padding: 0 15px;
+}
+
+p > a,
+p > a:visited,
+p > a:hover,
+p > a:active {
+  margin: 0;
+  max-width: auto;
+  padding: 0;
 }
 
 /*------------------------------------*\
