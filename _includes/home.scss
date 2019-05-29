@@ -1,4 +1,27 @@
 /*------------------------------------*\
+  # Home Content: Defaults
+\*------------------------------------*/
+
+.home-list-item ul,
+.first-impressions ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.home-list-item ul li,
+.first-impressions ul li {
+  font-size: 24px;
+  font-size: 2.4rem;
+  margin-right: 2rem;
+}
+
+.home-list-item ul li:last-child,
+.first-impressions ul li:last-child {
+  margin-right: 0;
+}
+
+/*------------------------------------*\
   # First Impressions: Default
 \*------------------------------------*/
 
@@ -25,14 +48,6 @@
   margin-bottom: 1rem;
   font-size: 18px;
   font-size: 1.8rem;
-}
-
-.first-impressions p {
-  margin-bottom: 1rem;
-}
-
-.first-impressions p a {
-  margin-bottom: 2rem;
 }
 
 .first-impressions ul {
@@ -98,25 +113,6 @@
 
 .home-list-item p {
   margin-bottom: 1rem;
-}
-
-.home-list-item ul,
-.first-impressions ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-
-.home-list-item ul li,
-.first-impressions ul li {
-  font-size: 24px;
-  font-size: 2.4rem;
-  margin-right: 1.5rem;
-}
-
-.home-list-item ul li:last-child,
-.first-impressions ul li:last-child {
-  margin-right: 0;
 }
 
 /*------------------------------------*\
