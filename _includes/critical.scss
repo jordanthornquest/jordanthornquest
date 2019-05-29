@@ -42,6 +42,7 @@ img {
 
 header {
   background-color: #32393A;
+  padding: 25px 0;
 }
 
 header .header-content {
@@ -49,7 +50,7 @@ header .header-content {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 2.5rem auto;
+  margin: 0 auto;
   max-width: 600px;
   padding: 0 30px;
 }
