@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "The exhausting, suffocating, feral, & sweat-covered joy of shouting with Idles"
+description: "On Friday evening, in San Francisco’s Great American Music Hall, I survived an evening with my current favorite motley crew of Bristol shouters, and their opening act, the greatest band in the world."
 preview-text: "On Friday evening, in San Francisco’s Great American Music Hall, I survived an evening with my current favorite motley crew of Bristol shouters, and their opening act, the greatest band in the world."
-preview-image: "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559086995/01FD684C-4F8C-4F72-A652-A9CEF13C2DB8.jpg"
+image: "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559086995/01FD684C-4F8C-4F72-A652-A9CEF13C2DB8.jpg"
 ---
 
 The most manic mosh pit I’ve ever ended up in was a Mac DeMarco show. This might seem like a misnomer, given DeMarco’s through-and-through spirit as a mellowed-out drifter. His 2017 Treefort performance, however, was an eye-opening moment of discovery, both of his latent lunacy onstage, and the absolutely terrifying energy of drunk white boys who were apparently ready to crush each other to the introspection of "This Old Dog." 
