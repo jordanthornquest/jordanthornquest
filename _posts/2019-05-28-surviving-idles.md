@@ -15,7 +15,7 @@ That isn’t to say I didn’t have the time of my life: I was dumbfounded and s
 What I’m getting at is that the [brutalism](https://youtu.be/F901emh112U) (HA!) of seeing Bristol post-punk darlings Idles in a live setting was premeditated. In place of the unexpected thrill of ending up crushed was the bristling hope that it would be the best yet. So-much-so, in fact, that I was willing to travel to San Francisco (a 10-hour drive) to get my fix. 
 
 <figure>
-	<img src="https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559089109/9506BBD8-9E9B-4FA4-A4F8-DE9BB09B4731.jpg" alt="The inciting incident. Image from The Needle Drop." />
+	<img data-src="https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559089109/9506BBD8-9E9B-4FA4-A4F8-DE9BB09B4731.jpg" alt="The inciting incident. Image from The Needle Drop." class="lazyload" />
 	<figcaption>The inciting incident. Photo from The Needle Drop.</figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ And this is where Idles succeeded with me. From the first pass of hearing vocali
 Perusing their live shows online, the group clearly held their own on stages of all sizes. Their charisma and energy were enormous, and I knew that I needed to be in one of those crowds. At the very least, I knew that I’d at least get to howl every empowering, feral word that resonated with me, and know that I was listening to one of my favorite records in the throes of a mob of like-minded, roiling strangers. Just like the band intended.
 
 <figure>
-	<img src="https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559089689/2451A7EA-4540-4187-83CE-9E66654EC301.jpg" alt="The Great American Music Hall. Photo courtesy of SlimPresents." />
+	<img data-src="https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559089689/2451A7EA-4540-4187-83CE-9E66654EC301.jpg" alt="The Great American Music Hall. Photo courtesy of SlimPresents." class="lazyload" />
 	<figcaption>The Great American Music Hall. Photo courtesy of SlimPresents.</figcaption>
 </figure>
 
@@ -39,7 +39,7 @@ What I was not prepared for, however, was how small the Great American Music Hal
 I was curious as to whether Idles would open with _Brutalism_ opener "Heel/Heal," as they had brought it back for some of their touring sets in previous months. I had no complaints towards the group’s wicked choice to instead tease their fans with the hyper-slow chug of *Joy’s* "Colossus." Watching their extra-plodding take on the track in previous live performances always seemed like a cheeky, extra dramatic joke between the band themselves, but this time, it was clear the joke was on the crowd, who was already frothing at the mouth for some madness. When the band finally brought the track up to speed, the chaos was immediate. 
 
 <figure>
-	<img src="https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559090220/1706A476-00CB-4B44-A28E-272BB466543B.jpg" alt="The bassist for Fontaines DC, the best band in the world. Photo courtesy of @fontainesdublin on Twitter." />
+	<img data-src="https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559090220/1706A476-00CB-4B44-A28E-272BB466543B.jpg" alt="The bassist for Fontaines DC, the best band in the world. Photo courtesy of @fontainesdublin on Twitter." class="lazyload" />
 	<figcaption>The bassist for Fontaines DC, the best band in the world. Photo courtesy of @fontainesdublin on Twitter.</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ Literally not a single song went by when someone wasn’t surfing the crowd. In 
 Not that the band didn’t have their own fun offstage. A hundred thousand shoutouts to Ian(?), their dedicated tour manager and cord runner. The gentleman frequently rushed out to keep cables free as the band would toss their instruments to the mercy of the many hands that abused them. The musicians would just as frequently follow, standing on the hands of fans to shout the triumphant spelling-centric bridge of "Danny Nedelko", and often abandoned their performing duties as they moshed with us. Talbot would often point his microphone directly into guitar cabinets with an impish grin, cranking the volume as the feedback surged across the hall.
 
 <figure>
-	<img src="https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559086995/01FD684C-4F8C-4F72-A652-A9CEF13C2DB8.jpg" alt="Idles guitarist Mark Bowen stands on the hands of fans to scream with them.">
+	<img data-src="https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559086995/01FD684C-4F8C-4F72-A652-A9CEF13C2DB8.jpg" alt="Idles guitarist Mark Bowen stands on the hands of fans to scream with them." class="lazyload" />
 	<figcaption>Idles guitarist Mark Bowen stands on the hands of fans to scream with them.</figcaption>
 </figure>
 
