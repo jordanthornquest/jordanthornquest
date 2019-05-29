@@ -2,6 +2,27 @@
   # Home Content: Defaults
 \*------------------------------------*/
 
+.home-list-item,
+.first-impressions {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0 15px;
+}
+
+.home-list-item p,
+.home-list-item h2,
+.home-list-item h3,
+.home-list-item ul,
+.first-impressions p, 
+.first-impressions h2, 
+.first-impressions h3, 
+.first-impressions ul {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: auto;
+  padding: 0;
+}
+
 .home-list-item ul,
 .first-impressions ul {
   display: flex;
