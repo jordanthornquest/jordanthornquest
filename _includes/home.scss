@@ -1,4 +1,14 @@
 /*------------------------------------*\
+  # Home Intro: Medium & Up
+\*------------------------------------*/
+
+@media (min-width: 768px) {
+  .home-intro img {
+    margin-top: 3.5rem;
+  }
+}
+
+/*------------------------------------*\
   # Home Content: Defaults
 \*------------------------------------*/
 
@@ -32,8 +42,8 @@
 
 .home-list-item ul li,
 .first-impressions ul li {
-  font-size: 30px;
-  font-size: 3rem;
+  font-size: 24px;
+  font-size: 2.4rem;
   margin-right: 3rem;
 }
 
@@ -108,7 +118,7 @@
 
 .home-list-item img {
   margin: 2rem 0 2rem;
-  max-width: 250px;
+  max-width: 500px;
   width: 100%;
 }
 
