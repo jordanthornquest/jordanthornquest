@@ -9,7 +9,7 @@ The most manic mosh pit I’ve ever ended up in was a Mac DeMarco show. This mig
 
 That isn’t to say I didn’t have the time of my life: I was dumbfounded and swept up in it as much as a third of the audience was. It was also a first for me. I hadn’t mustered the courage to step into a pit before DeMarco’s show, and doing so was equivalent to being taught how to swim by getting tossed into a surging whirlpool (with the additional risk of your very expensive camera getting smashed, if you were my friend Eli). Thankfully, the trauma paled to the thrill, and I discovered my love of getting trampled during a 15-minute gag performance of the chorus to Steely Dan’s "Reeling In The Years." The punk forefathers would be... perplexed.
 
-What I’m getting at is that the [brutalism](https://youtu.be/F901emh112U) (HA!) of seeing Bristol post-punk darlings Idles in a live setting was premeditated. In place of the unexpected thrill of ending up crushed was the bristling hope that it would be the best yet. So-much-so that I was willing to drive to San Francisco, the closest-at-10-hours performance, to get my fix. 
+What I’m getting at is that the [brutalism](https://youtu.be/F901emh112U) (HA!) of seeing Bristol post-punk darlings Idles in a live setting was premeditated. In place of the unexpected thrill of ending up crushed was the bristling hope that it would be the best yet. So-much-so, in fact, that I was willing to travel to San Francisco (a 10-hour drive) to get my fix. 
 
 <figure>
 	<img src="https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559089109/9506BBD8-9E9B-4FA4-A4F8-DE9BB09B4731.jpg" alt="The inciting incident. Image from The Needle Drop." />
