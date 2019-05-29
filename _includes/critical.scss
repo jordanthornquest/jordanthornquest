@@ -89,6 +89,7 @@ header .header-content nav ul {
   flex-direction: row;
   list-style-type: none;
   margin-bottom: 0;
+  padding: 0;
   text-align: right;
 }
 
@@ -101,14 +102,6 @@ header .header-content nav ul li {
 
 header .header-content nav ul li:first-child {
   margin-left: 0;
-}
-
-/*------------------------------------*\
-  # Site Content: Default
-\*------------------------------------*/
-
-main section {
-  padding: 0 15px;
 }
 
 /*------------------------------------*\
