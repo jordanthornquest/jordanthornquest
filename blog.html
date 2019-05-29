@@ -9,10 +9,8 @@ css: 'blog.scss'
 <section class="current-projects">
   {% for post in site.posts %}
     <article class="blog-list-item">
-      {% if post.image %}
-        <img src="{{ post.image }}" alt="An image preview for this blog post."/>
-      {% endif %}
       <h2>{{ post.title }}</h2>
+      <small>{{ page.date | date_to_long_string: "ordinal", "US" }}</small>
       <p>{{ post.preview-text }}</p>
       <a href="{{ post.url }}">Read More</a>
     </article>
