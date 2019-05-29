@@ -11,9 +11,9 @@
 
 .home-list-item ul li,
 .first-impressions ul li {
-  font-size: 24px;
-  font-size: 2.4rem;
-  margin-right: 2rem;
+  font-size: 30px;
+  font-size: 3rem;
+  margin-right: 3rem;
 }
 
 .home-list-item ul li:last-child,
@@ -48,6 +48,10 @@
   margin-bottom: 1rem;
   font-size: 18px;
   font-size: 1.8rem;
+}
+
+.first-impressions h3 + p {
+  margin-bottom: 1rem;
 }
 
 .first-impressions ul {
