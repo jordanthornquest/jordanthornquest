@@ -5,13 +5,17 @@
 html,
 body {
 margin: 0;
-height: 100%;
 padding: 0;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   background-color: #181C21;
   color: #eee;
+  min-height: 100%;
 }
 
 header,
@@ -114,10 +118,6 @@ header .header-content nav ul li:first-child {
   # Site Content: Default
 \*------------------------------------*/
 
-main {
-  min-height: 100%;
-}
-
 main > section {
   margin: 0 auto;
   max-width: 600px;
@@ -141,6 +141,10 @@ main > section {
 footer {
   background-color: #32393A;
   padding: 15px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 footer p {
