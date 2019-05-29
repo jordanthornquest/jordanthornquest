@@ -106,6 +106,13 @@ header .header-content nav ul li:first-child {
   margin-left: 0;
 }
 
+
+header .header-content nav ul li a {
+  margin: 0;
+  max-width: auto;
+  padding: 0;
+}
+
 /*------------------------------------*\
   # Site Footer: Default
 \*------------------------------------*/
