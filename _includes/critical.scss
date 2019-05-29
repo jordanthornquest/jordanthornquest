@@ -49,27 +49,28 @@ header .header-content {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0;
+  margin: 0 auto;
   max-width: 600px;
   padding: 0 30px;
 }
 
-header img {
+header .header-content img {
   max-width: 55px;
   width: 100%;
 }
 
-header nav {
+header .header-content nav {
 }
 
-header nav p {
+header .header-content nav p {
   font-size: 20px;
   font-size: 2rem;
   font-weight: 700;
+  margin-bottom: 1rem;
   text-align: right;
 }
 
-header nav ul {
+header .header-content nav ul {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -77,15 +78,15 @@ header nav ul {
   text-align: right;
 }
 
-header nav ul li {
+header .header-content nav ul li {
   margin: 0 0 0 2rem;
   font-size: 16px;
   font-size: 1.6rem;
   text-align: right;
 }
 
-header nav ul li:first-child {
-  margin: 0 0 0 auto;
+header .header-content nav ul li:first-child {
+  margin-left: 0;
 }
 
 /*------------------------------------*\
