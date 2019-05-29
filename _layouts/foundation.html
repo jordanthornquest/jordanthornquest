@@ -35,6 +35,14 @@ layout: compress
         {% include critical.scss %}
       {% endcapture %}
       {{ criticalcss | scssify }}
+      
+      
+      {% if layout.css %}
+        {% capture layoutcss %}
+          {% include {{ layout.css }} %}
+        {% endcapture %}
+        {{ layoutcss | scssify }}
+      {% endif %}
 
       {% if page.css %}
         {% capture pagecss %}
