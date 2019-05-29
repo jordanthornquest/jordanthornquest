@@ -11,7 +11,12 @@
 \*------------------------------------*/
 
 .blog-list-item {
-  margin-bottom: 3rem;
+  margin: 5rem 0;
+}
+
+.blog-list-item small {
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .blog-list-item h2 {
