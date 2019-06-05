@@ -4,6 +4,7 @@ title: "The exhausting, suffocating, feral, & sweat-covered joy of shouting with
 description: "On Friday evening, in San Francisco’s Great American Music Hall, I survived an evening with my current favorite motley crew of Bristol shouters, and their opening act, the greatest band in the world."
 preview-text: "On Friday evening, in San Francisco’s Great American Music Hall, I survived an evening with my current favorite motley crew of Bristol shouters, and their opening act, the greatest band in the world."
 image: "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559086995/01FD684C-4F8C-4F72-A652-A9CEF13C2DB8.jpg"
+show-preview-image: true
 categories: ['blog']
 tags: ['live shows', 'reviews']
 ---
