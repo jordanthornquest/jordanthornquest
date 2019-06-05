@@ -24,11 +24,6 @@ twitter:
 collections:
   - home_list
 
-# Sass
-sass:
-  sass_dir: _sass
-  style: compressed
-
 # Plugins
 plugins:
   - jekyll-assets
