@@ -52,8 +52,8 @@ layout: compress
       {% endif %}
     </style>
     <!-- Non-Critical CSS -->
-    <link rel="preload" href="{{ 'assets/css/style.css' | relative_url }}" as="style" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}"></noscript>
+    {% asset style.css rel:preload as:style onload:"this.rel='stylesheet'" %}
+    <noscript>{% asset style.css rel:stylesheet %}</noscript>
     <!-- Manifest Theme Color -->
     <meta name="theme-color" content="#ffffff">
     {% seo %}
