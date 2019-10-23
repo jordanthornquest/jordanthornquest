@@ -1,6 +1,6 @@
 ---
 img-alt: "Kiwi and Scooter, the two frontpeople of King & Queen of the Losers."
-image: "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_600/v1552280249/EFhsEHlUYAAGmRE.jpg"
+image: "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_600/v1552280249/scooterandkiwi.jpg"
 title: "King & Queen of the Losers"
 links:
   - title: "Apple Music"
