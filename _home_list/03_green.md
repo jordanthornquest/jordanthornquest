@@ -4,4 +4,4 @@ image: "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_600/v1
 title: "Green Citrine"
 ---
 
-I did the recording engineering & mixing Idaho pop-rock duo [Green Citrine's](https://www.facebook.com/GreenCitrine) debut album. The record is slated for release later this year.
+I did the recording, engineering, & mixing for Idaho pop-rock duo [Green Citrine's](https://www.facebook.com/GreenCitrine) debut album. The record is slated for release in 2020.

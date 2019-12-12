@@ -14,4 +14,4 @@ links:
     url: "https://open.spotify.com/artist/5mGnbFnoUYEUNE5EKnQY7R?si=Ma7A3o-rSRia15ow53CUkQ"
 ---
 
-I did recording engineering for the debut album by [Raccoon Tour](https://raccoontour.bandcamp.com), a music project by [Nate Burr](https://www.youtube.com/NateIsLame). My guitar work is featured here, as well. The record does not have a release date.
+I did recording engineering for the debut album by [Raccoon Tour](https://raccoontour.bandcamp.com), a music project by [Nate Burr](https://www.youtube.com/NateIsLame). My guitar work is featured here, as well. The record will release in 2020.
