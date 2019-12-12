@@ -14,4 +14,4 @@ links:
     url: "https://open.spotify.com/album/0I1by94nmDw3gt43sPRovA?si=6R3JRxepQxWT2PNEn74qdA"
 ---
 
-I play lead guitar & do backup harmonies for indie-rockers [King & Queen of the Losers](https://www.youtube.com/channel/UCMHxOuc4abgqdwGqND3a74A). Their debut record [Crutch](https://kingandqueenofthelosers.bandcamp.com/album/crutch) was released in 2017, and their followup American Squalor arrives in December of 2019. We'll be touring with this record in 2020.
+I play lead guitar & do backup harmonies for indie-rockers [King & Queen of the Losers](https://www.youtube.com/channel/UCMHxOuc4abgqdwGqND3a74A). Their debut record [Crutch](https://kingandqueenofthelosers.bandcamp.com/album/crutch) was released in 2017, and their followup [American Squalor](https://kingandqueenofthelosers.bandcamp.com/album/american-squalor) released in December of 2019. We'll be touring with this record in 2020.
