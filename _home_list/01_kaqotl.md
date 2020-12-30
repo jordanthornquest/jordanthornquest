@@ -5,13 +5,13 @@ title: "King & Queen of the Losers"
 links:
   - title: "Apple Music"
     icon: "apple"
-    url: "https://music.apple.com/us/album/crutch/1292467237"
+    url: "https://music.apple.com/us/album/american-squalor/1489547714"
   - title: "Bandcamp"
     icon: "bandcamp"
-    url: "https://kingandqueenofthelosers.bandcamp.com/album/crutch"
+    url: "https://kingandqueenofthelosers.bandcamp.com/album/american-squalor"
   - title: "Spotify"
     icon: "spotify"
-    url: "https://open.spotify.com/album/0I1by94nmDw3gt43sPRovA?si=6R3JRxepQxWT2PNEn74qdA"
+    url: "https://open.spotify.com/album/426UnOuTK2h61nb0ULxxZj"
 ---
 
-I play lead guitar & do backup harmonies for indie-rockers [King & Queen of the Losers](https://www.youtube.com/channel/UCMHxOuc4abgqdwGqND3a74A). Their debut record [Crutch](https://kingandqueenofthelosers.bandcamp.com/album/crutch) was released in 2017, and their followup [American Squalor](https://kingandqueenofthelosers.bandcamp.com/album/american-squalor) released in December of 2019. We'll be touring with this record in 2020.
+I played lead guitar & do backup harmonies for indie-rockers [King & Queen of the Losers](https://www.youtube.com/channel/UCMHxOuc4abgqdwGqND3a74A). Their debut record [Crutch](https://kingandqueenofthelosers.bandcamp.com/album/crutch) was released in 2017, and their followup [American Squalor](https://kingandqueenofthelosers.bandcamp.com/album/american-squalor) released in December of 2019. The group officially disbanded in 2020.
