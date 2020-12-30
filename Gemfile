@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.6.2'
+ruby '2.7.0'
 
 gem 'jekyll', '3.8.6'
 gem 'sprockets', '~> 3.7'
