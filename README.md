@@ -1,3 +1,5 @@
-# My Personal Website
+# Jordan Thornquest
 
-Built with Jekyll, with a focus on accessibility, performance, and a mobile-first build.
+**24 • He/Him • Gay. Noodler & doodler.**
+
+Built with Eleventy. Hosted on Netlify.
