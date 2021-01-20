@@ -1,0 +1,23 @@
+{
+  "name": "@jordanthornquest/jordanthornquest",
+  "version": "1.0.0",
+  "description": "24 • He/Him • Gay. Noodler & doodler.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordanthornquest/jordanthornquest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordanthornquest/jordanthornquest/issues"
+  },
+  "homepage": "https://github.com/jordanthornquest/jordanthornquest#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}
