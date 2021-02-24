@@ -1,5 +1,5 @@
 ---
-layout: "base.njk"
+layout: "base"
 ---
 
 # Reconstructing, be back soon.
