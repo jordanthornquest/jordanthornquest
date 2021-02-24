@@ -1,4 +1,6 @@
 module.exports = (eleventyConfig) => {
+  eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/manifest.webmanifest");
   // Return config object
   return {
     dir: {
