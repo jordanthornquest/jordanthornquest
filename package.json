@@ -1,34 +1,19 @@
 {
   "name": "@jordanthornquest/jordanthornquest",
-  "version": "1.0.0",
-  "description": "Jordan Thornquest's website, built with Eleventy and Vue.",
+  "version": "0.0.1",
+  "description": "Personal website, built with VuePress.",
+  "main": "index.js",
+  "authors": {
+    "name": "Jordan Thornquest",
+    "email": "me@jordanthornquest.com"
+  },
+  "repository": "https://github.com/jordanthornquest/jordanthornquest.git",
   "scripts": {
-    "build": "npm-run-all clean build:site",
-    "build:site": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy",
-    "clean": "npx del dist/",
-    "start": "npm-run-all clean watch:site",
-    "watch:site": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --serve"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jordanthornquest/jordanthornquest.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jordanthornquest/jordanthornquest/issues"
-  },
-  "homepage": "https://github.com/jordanthornquest/jordanthornquest#readme",
+  "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
-    "@11ty/eleventy-plugin-vue": "^0.3.0",
-    "del-cli": "^3.0.1",
-    "npm-run-all": "^4.1.5"
-  },
-  "dependencies": {
-    "@popeindustries/lit-html-server": "^3.1.0",
-    "autoprefixer": "^10.2.4",
-    "postcss": "^8.2.7"
+    "vuepress": "^1.5.3"
   }
 }
