@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "npm-run-all clean build:site",
-    "build:site": "npx @11ty/eleventy",
+    "build:site": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy",
     "clean": "npx del dist/",
     "start": "npm-run-all clean watch:site",
-    "watch:site": "npx @11ty/eleventy --serve"
+    "watch:site": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
