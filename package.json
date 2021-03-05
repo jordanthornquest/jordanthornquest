@@ -2,7 +2,6 @@
   "name": "@jordanthornquest/jordanthornquest",
   "version": "1.0.0",
   "description": "Jordan Thornquest's website, built with Eleventy and Vue.",
-  "main": "index.js",
   "scripts": {
     "build": "npm-run-all clean build:site",
     "build:site": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy",
