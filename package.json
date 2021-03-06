@@ -4,7 +4,10 @@
   "description": "Personal website built with Eleventy.",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "@11ty/eleventy-plugin-vue": "^0.3.0"
+    "@11ty/eleventy-plugin-vue": "^0.3.0",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.7",
+    "postcss-nested": "^5.0.5"
   },
   "scripts": {
     "build": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy",
