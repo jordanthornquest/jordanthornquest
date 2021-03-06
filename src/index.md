@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://v1.vuepress.vuejs.org/hero.png
-tagline: Personal website, built with VuePress.
+tagline: My website, built with VuePress.
 actionText: Quick Start →
 actionLink: /guide/
 features:
