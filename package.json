@@ -6,8 +6,8 @@
   "author": "Jordan Thornquest <1444819+jordanthornquest@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "site:dev": "vuepress dev site",
+    "site:build": "vuepress build site"
   },
   "devDependencies": {
     "vuepress": "^1.8.2"
