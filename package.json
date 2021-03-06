@@ -1,3 +1,6 @@
 {
-  "name": "jordanthornquest"
+  "name": "jordanthornquest",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  }
 }
