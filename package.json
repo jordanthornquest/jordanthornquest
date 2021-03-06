@@ -2,7 +2,9 @@
   "name": "jordanthornquest",
   "version": "1.0.0",
   "description": "Personal website built with Eleventy.",
-  "devDependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
