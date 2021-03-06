@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Personal website built with Eleventy.",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-plugin-vue": "^0.3.0"
   },
   "scripts": {
     "build": "npx @11ty/eleventy",
