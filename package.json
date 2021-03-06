@@ -1,0 +1,8 @@
+{
+  "name": "jordanthornquest",
+  "version": "0.1.0",
+  "description": "My website, built with VuePress.",
+  "repository": "https://github.com/jordanthornquest/jordanthornquest.git",
+  "author": "Jordan Thornquest <1444819+jordanthornquest@users.noreply.github.com>",
+  "license": "MIT"
+}
