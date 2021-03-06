@@ -1,0 +1,20 @@
+{
+  "name": "jordanthornquest",
+  "version": "1.0.0",
+  "description": "Personal website built with Eleventy.",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordanthornquest/jordanthornquest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordanthornquest/jordanthornquest/issues"
+  },
+  "homepage": "https://github.com/jordanthornquest/jordanthornquest#readme"
+}
