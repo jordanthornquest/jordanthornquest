@@ -7,8 +7,8 @@
     "@11ty/eleventy-plugin-vue": "^0.3.0"
   },
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "build": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy",
+    "start": "ELEVENTY_EXPERIMENTAL=true npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
