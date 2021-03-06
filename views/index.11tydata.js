@@ -10,6 +10,6 @@ module.exports = {
     "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559763975/hurr.jpg",
   title: "Home",
   eleventyComputed: {
-    url: (data) => path.join(data.constants.siteUrl, data.page.url),
+    pageFullUrl: (data) => path.join(data.constants.siteUrl, data.page.url),
   },
 };
