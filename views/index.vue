@@ -1,11 +1,6 @@
 <template>
   <main>
-    <h1>Reconstructing, be back soon.</h1>
-    <p>
-      For the time being, check out my
-      <a href="https://music.jordanthornquest.com">Bandcamp</a>. See you
-      shortly!
-    </p>
+    <greeting />
   </main>
 </template>
 
@@ -13,8 +8,14 @@
 // Libraries
 const path = require("path");
 
+// Import partials
+import greeting from "./_includes/greeting.vue";
+
 // Export
 export default {
+  components: {
+    greeting,
+  },
   data: {
     description:
       "Idaho musician Jordan Thornquest maps his mindstate with theatrical relish, producing a form of punk-informed power pop that's both candidly introspective and fearlessly extroverted.",
