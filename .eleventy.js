@@ -1,14 +1,14 @@
 module.exports = function (eleventyConfig) {
   // Copy static files to output
-  eleventyConfig.addPassthroughCopy({ "static/": "/" });
+  eleventyConfig.addPassthroughCopy({ "src/_static/": "/" });
 
   // Return configuration object
   return {
     dir: {
-      data: "data",
-      includes: "includes",
-      input: "views",
-      layouts: "layouts",
+      data: "_data",
+      includes: "_includes",
+      input: "src",
+      layouts: "_layouts",
       output: "dist",
     },
   };
