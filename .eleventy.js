@@ -5,10 +5,11 @@ module.exports = function (eleventyConfig) {
   // Return configuration object
   return {
     dir: {
+      data: "data",
+      includes: "includes",
       input: "views",
+      layouts: "layouts",
       output: "dist",
-      includes: "_includes",
-      layouts: "_layouts",
     },
   };
 };
