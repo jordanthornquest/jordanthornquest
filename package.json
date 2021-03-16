@@ -2,16 +2,14 @@
   "name": "jordanthornquest",
   "version": "1.0.0",
   "description": "Personal website built with Eleventy.",
-  "dependencies": {
+  "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "del-cli": "^3.0.1"
   },
   "scripts": {
     "build": "npx del dist/ && npx @11ty/eleventy",
     "clean": "npx del dist/",
-    "start": "npx del dist/ && npx @11ty/eleventy --serve",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "start": "npx del dist/ && npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -23,13 +21,5 @@
   "bugs": {
     "url": "https://github.com/jordanthornquest/jordanthornquest/issues"
   },
-  "homepage": "https://github.com/jordanthornquest/jordanthornquest#readme",
-  "devDependencies": {
-    "@babel/core": "^7.13.10",
-    "@storybook/addon-actions": "^6.1.21",
-    "@storybook/addon-essentials": "^6.1.21",
-    "@storybook/addon-links": "^6.1.21",
-    "@storybook/html": "^6.1.21",
-    "babel-loader": "^8.2.2"
-  }
+  "homepage": "https://github.com/jordanthornquest/jordanthornquest#readme"
 }
