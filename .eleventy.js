@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
 
   // Copy temporary CSS when watching
   eleventyConfig.addPassthroughCopy({
-    ".cache/css/styles.css": "/css/styles.css",
+    "eleventy/css/styles.css": "/css/styles.css",
   });
 
   // Return configuration object
