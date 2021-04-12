@@ -1,6 +1,6 @@
 module.exports = {
   purge: ["./eleventy/**/*.html"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media",
   theme: {
     container: {
       center: true,
