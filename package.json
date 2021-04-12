@@ -14,10 +14,12 @@
   },
   "scripts": {
     "build": "npm-run-all clean build:site build:styles",
-    "build:site": "ELEVENTY_ENV=development npx @11ty/eleventy",
+    "build:site": "ELEVENTY_ENV=production npx @11ty/eleventy",
+    "build:styles": "postcss ./styles/styles.css -o ./dist/styles.css",
     "clean": "npx del dist/",
-    "start": "npm-run-all clean --parallel watch:site watch:styles",
-    "watch:site": "ELEVENTY_ENV=production npx @11ty/eleventy --serve"
+    "start": "npm-run-all clean --parallel watch:styles watch:site",
+    "watch:site": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
+    "watch:styles": "postcss --watch ./styles/styles.css -o ./dist/styles.css"
   },
   "repository": {
     "type": "git",
