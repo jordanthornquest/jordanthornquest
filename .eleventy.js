@@ -2,8 +2,10 @@ module.exports = function (eleventyConfig) {
   // Copy static files to output
   eleventyConfig.addPassthroughCopy({ "static/": "/" });
 
-  // Watch css and rebuild when changed
-  eleventyConfig.addWatchTarget("./styles/");
+  // Copy temporary CSS when watching
+  eleventyConfig.addPassthroughCopy({
+    ".cache/css/styles.css": "/css/styles.css",
+  });
 
   // Return configuration object
   return {
