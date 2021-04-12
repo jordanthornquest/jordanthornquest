@@ -15,11 +15,11 @@
   "scripts": {
     "build": "npm-run-all clean build:site build:styles",
     "build:site": "ELEVENTY_ENV=production npx @11ty/eleventy",
-    "build:styles": "postcss ./styles/styles.css -o ./dist/styles.css",
+    "build:styles": "NODE_ENV=production postcss ./styles/styles.css -d ./dist/css/ --config ./postcss.config.js",
     "clean": "npx del dist/",
     "start": "npm-run-all clean --parallel watch:styles watch:site",
     "watch:site": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
-    "watch:styles": "postcss --watch ./styles/styles.css -o ./dist/styles.css"
+    "watch:styles": "postcss ./styles/styles.css -d ./.cache/css/ --config ./postcss.config.js -w"
   },
   "repository": {
     "type": "git",
