@@ -4,10 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    {%- if page.url == "/" -%}
+    <title>Jordan Thornquest</title>
+    <meta property="og:title" content="Jordan Thornquest" />
+    {%- else -%}
     <title>{{ title }} | Jordan Thornquest</title>
-    <meta name="description" content="{{ description }}" / >
-
     <meta property="og:title" content="{{ title }} | Jordan Thornquest" />
+    {%- endif -%}
+
+    <meta name="description" content="{{ description }}" />
+
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ pageFullUrl }}" />
     <meta property="og:image" content="{{ socialImage }}" />
@@ -31,7 +37,8 @@
     <meta name="msapplication-TileColor" content="#F75E3C" />
     <meta name="theme-color" content="#F75E3C" />
 
-    <style></style>
+    <!-- CSS -->
+    <link href="styles.css" rel="stylesheet" />
   </head>
 
   <body>
