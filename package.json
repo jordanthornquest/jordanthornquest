@@ -12,13 +12,13 @@
     "tailwindcss": "^2.1.0"
   },
   "scripts": {
-    "build": "npm run clean && npm run build:styles && npm run build:site",
+    "start": "npm run clean && npx concurrently \"npm run watch:css\" \"npm run watch:site\"",
+    "build": "npm run clean && npm run build:css && npm run build:site",
+    "build:css": "NODE_ENV=production npx postcss --config ./postcss.config.js ./src/_assets/css/styles.css -o ./.cache/compiled.css",
     "build:site": "NODE_ENV=production npx @11ty/eleventy",
-    "build:styles": "NODE_ENV=production npx postcss --config ./postcss.config.js ./src/_assets/css/tailwind.css -o ./src/_assets/css/compiled.css",
-    "clean": "npx rimraf ./dist/",
-    "start": "npm run clean && npx concurrently \"watch:site\" \"watch:styles\"",
-    "watch:site": "NODE_ENV=development npx @11ty/eleventy --serve",
-    "watch:styles": "npx postcss --config ./postcss.config.js ./src/_assets/css/tailwind.css -o ./src/_assets/css/compiled.css -w"
+    "clean": "npx rimraf ./dist/ ./.cache/",
+    "watch:css": "npx postcss --config ./postcss.config.js ./src/_assets/css/styles.css -o ./.cache/compiled.css -w",
+    "watch:site": "NODE_ENV=development npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
