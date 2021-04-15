@@ -5,21 +5,20 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "autoprefixer": "^10.2.5",
-    "del-cli": "^3.0.1",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.2.10",
+    "concurrently": "^6.0.2",
     "postcss-cli": "^8.3.1",
-    "postcss-import": "^14.0.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
     "tailwindcss": "^2.1.0"
   },
   "scripts": {
-    "build": "npm-run-all clean build:styles build:site",
-    "build:site": "ELEVENTY_ENV=production npx @11ty/eleventy",
-    "build:styles": "NODE_ENV=production postcss ./styles/styles.css -d ./eleventy/css/ --config ./postcss.config.js",
-    "clean": "npx del dist/",
-    "start": "npm-run-all clean --parallel watch:site watch:styles",
-    "watch:site": "ELEVENTY_ENV=development npx @11ty/eleventy --serve",
-    "watch:styles": "postcss ./styles/styles.css -d ./eleventy/css/ --config ./postcss.config.js -w"
+    "build": "npm run clean && npm run build:styles && npm run build:site",
+    "build:site": "NODE_ENV=production npx @11ty/eleventy",
+    "build:styles": "NODE_ENV=production npx postcss ./styles/styles.css -d ./eleventy/css/ --config ./postcss.config.js",
+    "clean": "npx rimraf ./dist/",
+    "start": "npm run clean && concurrently \"watch:site\" \"watch:styles\"",
+    "watch:site": "NODE_ENV=development npx @11ty/eleventy --serve",
+    "watch:styles": "npx postcss ./styles/styles.css -d ./eleventy/css/ --config ./postcss.config.js -w"
   },
   "repository": {
     "type": "git",
