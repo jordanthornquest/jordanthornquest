@@ -14,11 +14,11 @@
   "scripts": {
     "build": "npm run clean && npm run build:styles && npm run build:site",
     "build:site": "NODE_ENV=production npx @11ty/eleventy",
-    "build:styles": "NODE_ENV=production npx postcss ./src/_assets/css/tailwind.css -d ./src/_assets/css/ --config ./postcss.config.js",
+    "build:styles": "NODE_ENV=production npx postcss --config ./postcss.config.js ./src/_assets/css/tailwind.css -o ./src/_assets/css/compiled.css",
     "clean": "npx rimraf ./dist/",
     "start": "npm run clean && npx concurrently \"watch:site\" \"watch:styles\"",
     "watch:site": "NODE_ENV=development npx @11ty/eleventy --serve",
-    "watch:styles": "npx postcss ./src/_assets/css/tailwind.css -d ./src/_assets/css/ --config ./postcss.config.js -w"
+    "watch:styles": "npx postcss --config ./postcss.config.js ./src/_assets/css/tailwind.css -o ./src/_assets/css/compiled.css -w"
   },
   "repository": {
     "type": "git",
