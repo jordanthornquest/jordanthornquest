@@ -17,7 +17,7 @@
     "build:css": "NODE_ENV=production npx postcss --config ./postcss.config.js ./src/_assets/css/styles.css -o ./.cache/compiled.css",
     "build:site": "NODE_ENV=production npx @11ty/eleventy",
     "clean": "npx rimraf ./dist/ ./.cache/",
-    "watch:css": "npx postcss --config ./postcss.config.js ./src/_assets/css/styles.css -o ./.cache/compiled.css -w",
+    "watch:css": "npx postcss --verbose --config ./postcss.config.js ./src/_assets/css/styles.css -o ./.cache/compiled.css --watch",
     "watch:site": "NODE_ENV=development npx @11ty/eleventy --serve"
   },
   "repository": {
