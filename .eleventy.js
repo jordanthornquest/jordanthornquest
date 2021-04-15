@@ -1,11 +1,17 @@
 module.exports = function (eleventyConfig) {
+  // We will use the .eleventyignore instead
+  eleventyConfig.setUseGitIgnore(false);
+
   // Copy static files to output
   eleventyConfig.addPassthroughCopy({ "./src/_static/": "./static/" });
 
-  // Copy temporary CSS when watching
+  // Copy compiled css from cache
   eleventyConfig.addPassthroughCopy({
-    "./src/_assets/css/compiled.css": "./css/styles.css",
+    "./.cache/compiled.css": "./css/styles.css",
   });
+
+  // Watch compiled css and trigger a rebuild when changed
+  eleventyConfig.addWatchTarget("./.cache/compiled.css");
 
   // Return configuration object
   return {
