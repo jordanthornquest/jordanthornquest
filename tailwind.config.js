@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./eleventy/**/*.html"],
+  purge: ["./src/**/*.html"],
   darkMode: "media",
   theme: {
     container: {
