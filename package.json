@@ -7,7 +7,6 @@
     "@popeindustries/lit-html-server": "^3.1.0",
     "autoprefixer": "^10.2.5",
     "concurrently": "^6.0.2",
-    "lit-ntml": "^2.18.2",
     "postcss": "^8.2.10",
     "postcss-cli": "^8.3.1",
     "prettier": "^2.2.1",
