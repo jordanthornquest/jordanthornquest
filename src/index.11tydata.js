@@ -5,7 +5,7 @@ const path = require("path");
 module.exports = {
   description:
     "Jordan Thornquest maps his mindstate with theatrical relish & a form of punk-informed power pop that's both candidly introspective and fearlessly extroverted.",
-  layout: "base.html",
+  layout: "base.11ty.js",
   socialImage:
     "https://res.cloudinary.com/deedobzcr/image/upload/q_auto,f_auto,w_1200/v1559763975/hurr.jpg",
   title: "Home",
