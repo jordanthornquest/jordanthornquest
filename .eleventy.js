@@ -1,3 +1,7 @@
+// html-minifier for HTML minifying
+const htmlmin = require("html-minifier");
+
+// Export configuration
 module.exports = function (eleventyConfig) {
   // We will use the .eleventyignore instead
   eleventyConfig.setUseGitIgnore(false);
@@ -8,6 +12,20 @@ module.exports = function (eleventyConfig) {
   // Copy compiled css from cache
   eleventyConfig.addPassthroughCopy({
     "./.cache/compiled.css": "./css/styles.css",
+  });
+
+  // Minify HTML on build
+  eleventyConfig.addTransform("htmlmin", async function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
+
+    return content;
   });
 
   // Watch compiled css and trigger a rebuild when changed
