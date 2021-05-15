@@ -9,11 +9,6 @@ module.exports = function (eleventyConfig) {
   // Copy static files to output
   eleventyConfig.addPassthroughCopy({ "./src/_static/": "./static/" });
 
-  // Copy compiled css from cache
-  eleventyConfig.addPassthroughCopy({
-    "./.cache/compiled.css": "./css/styles.css",
-  });
-
   // Minify HTML on build
   eleventyConfig.addTransform("htmlmin", async function (content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
@@ -27,9 +22,6 @@ module.exports = function (eleventyConfig) {
 
     return content;
   });
-
-  // Watch compiled css and trigger a rebuild when changed
-  eleventyConfig.addWatchTarget("./.cache/compiled.css");
 
   // Return configuration object
   return {
