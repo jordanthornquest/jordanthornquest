@@ -1,5 +1,7 @@
 // Import lit-html-server to render templates
-const { html, renderToBuffer } = require("@popeindustries/lit-html-server");
+const { html, renderToString } = require("@popeindustries/lit-html-server");
+
+// Use unsafeHTML for rendering the HTML contents of a layout
 const {
   unsafeHTML,
 } = require("@popeindustries/lit-html-server/directives/unsafe-html.js");
@@ -63,10 +65,10 @@ module.exports = async function (data) {
       </head>
 
       <body class="bg-gray-50 dark:bg-gray-900">
-        ${data.content}
+        ${unsafeHTML(data.content)}
       </body>
     </html>
   `;
 
-  return renderToBuffer(baseLayout);
+  return renderToString(baseLayout);
 };
