@@ -61,7 +61,7 @@ module.exports = async function (data) {
         <meta name="theme-color" content="#F75E3C" />
 
         <!-- CSS -->
-        <link href="/css/styles.css" rel="stylesheet" />
+        <link href="/styles/styles.css" rel="stylesheet" />
       </head>
 
       <body class="bg-gray-50 dark:bg-gray-900">
