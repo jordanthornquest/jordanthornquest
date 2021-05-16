@@ -6,69 +6,109 @@ const {
   unsafeHTML,
 } = require("@popeindustries/lit-html-server/directives/unsafe-html.js");
 
-// Check current page url for page title
-const titleBuilder = async function (data) {
-  if (data.page.url == "/") {
-    return "Jordan Thornquest";
-  } else {
-    return `${data.title} | Jordan Thornquest`;
+// Import path for building pageFullUrl
+const path = require("path");
+
+// Export class for layout rendering
+module.exports = class {
+  // Set layout data defaults
+  async data() {
+    return {
+      description:
+        "Jordan Thornquest maps his mindstate with theatrical relish & a form of punk-informed power pop that's both candidly introspective and fearlessly extroverted.",
+      eleventyComputed: {
+        pageFullUrl: (data) => path.join(data.constants.siteUrl, data.page.url),
+        socialImage: (data) => data.constants.socialImage,
+      },
+      ogType: "website",
+    };
   }
-};
 
-// Render the layout with a function
-module.exports = async function (data) {
-  // The HTML layout
-  const baseLayout = html`
-    <!DOCTYPE html>
-    <html class="text-gray-900 dark:text-gray-100" lang="en">
-      <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+  // Check current page url for page title
+  async titleBuilder(url, title) {
+    if (url == "/") {
+      return "Jordan Thornquest";
+    } else {
+      return `${title} | Jordan Thornquest`;
+    }
+  }
 
-        <title>${titleBuilder(data)}</title>
-        <meta property="og:title" content="${titleBuilder(data)}" />
-        <meta name="description" content="${data.description}" />
+  // Render the page
+  async render({
+    content,
+    description,
+    ogType,
+    page,
+    pageFullUrl,
+    socialImage,
+    title,
+  }) {
+    // Get page url
+    const pagePath = page.url;
 
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="${data.pageFullUrl}" />
-        <meta property="og:image" content="${data.socialImage}" />
+    // Get page title
+    const pageTitle = await this.titleBuilder(pagePath, title);
 
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/static/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/static/icons/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/static/icons/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/static/site.webmanifest" />
-        <link
-          rel="mask-icon"
-          href="/static/icons/safari-pinned-tab.svg"
-          color="#000000"
-        />
-        <meta name="msapplication-config" content="/static/browserconfig.xml" />
-        <meta name="msapplication-TileColor" content="#F75E3C" />
-        <meta name="theme-color" content="#F75E3C" />
+    // Lit-HTML output
+    const layoutTemplate = html`
+      <!DOCTYPE html>
+      <html class="no-js text-gray-900 dark:text-gray-100" lang="en">
+        <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- CSS -->
-        <link href="/styles/styles.css" rel="stylesheet" />
-      </head>
+          <title>${pageTitle}</title>
+          <meta property="og:title" content="${pageTitle}" />
 
-      <body class="bg-gray-50 dark:bg-gray-900">
-        ${unsafeHTML(data.content)}
-      </body>
-    </html>
-  `;
+          <meta name="description" content="${description}" />
+          <meta property="og:description" content="${description}" />
 
-  return renderToString(baseLayout);
+          <link rel="canonical" href="${pageFullUrl}" />
+          <meta property="og:url" content="${pageFullUrl}" />
+
+          <meta property="og:image" content="${socialImage}" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:type" content="${ogType}" />
+          <meta name="twitter:card" content="summary_large_image" />
+
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/static/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/static/icons/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/static/icons/favicon-16x16.png"
+          />
+          <link rel="manifest" href="/static/site.webmanifest" />
+          <meta
+            name="msapplication-config"
+            content="/static/browserconfig.xml"
+          />
+          <meta name="theme-color" content="#F75E3C" />
+
+          <!-- CSS -->
+          <link href="/styles/styles.css" rel="stylesheet" />
+        </head>
+
+        <body class="bg-gray-50 dark:bg-gray-900">
+          ${unsafeHTML(content)}
+        </body>
+      </html>
+    `;
+
+    // Render Lit-HTML content to string
+    const renderedLayout = await renderToString(layoutTemplate);
+
+    // Return rendered layout
+    return renderedLayout;
+  }
 };
