@@ -6,21 +6,17 @@
     "@11ty/eleventy": "^0.12.1",
     "@popeindustries/lit-html-server": "^3.1.0",
     "autoprefixer": "^10.2.5",
-    "concurrently": "^6.0.2",
     "html-minifier": "^4.0.0",
     "postcss": "^8.2.10",
-    "postcss-cli": "^8.3.1",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "tailwindcss": "^2.1.0"
   },
   "scripts": {
-    "start": "npm run clean && npx concurrently \"npm run watch:css\" \"npm run watch:site\"",
-    "build": "npm run clean && npm run build:css && npm run build:site",
-    "build:css": "NODE_ENV=production npx postcss --config ./postcss.config.js ./src/_assets/css/styles.css -o ./.cache/compiled.css",
+    "start": "npm run clean && npm run watch:site",
+    "build": "npm run clean && npm run build:site",
     "build:site": "NODE_ENV=production npx @11ty/eleventy",
     "clean": "npx rimraf ./dist/ ./.cache/",
-    "watch:css": "npx postcss --verbose --config ./postcss.config.js ./src/_assets/css/styles.css -o ./.cache/compiled.css --watch",
     "watch:site": "NODE_ENV=development npx @11ty/eleventy --serve"
   },
   "repository": {
