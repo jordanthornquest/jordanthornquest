@@ -1,8 +1,11 @@
 // RSS plugin for generating feeds from data
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
-// html-minifier for HTML minifying
-const htmlmin = require("html-minifier");
+// Import components
+// const components = require("./src/_components");
+
+// Import transforms
+const transforms = require("./src/_utils/transforms");
 
 // Export configuration
 module.exports = function (eleventyConfig) {
@@ -12,25 +15,15 @@ module.exports = function (eleventyConfig) {
   // Add RSS plugin
   eleventyConfig.addPlugin(pluginRss);
 
-  // Minify HTML on build
-  // Don't minify on development, since it's slow
-  if (process.env.NODE_ENV === "production") {
-    eleventyConfig.addTransform(
-      "htmlmin",
-      async function (content, outputPath) {
-        if (outputPath && outputPath.endsWith(".html")) {
-          let minified = htmlmin.minify(content, {
-            useShortDoctype: true,
-            removeComments: true,
-            collapseWhitespace: true,
-          });
-          return minified;
-        }
+  // Import components
+  // Object.keys(components).forEach((componentName) => {
+  //   eleventyConfig.addShortcode(componentName, components[componentName]);
+  // });
 
-        return content;
-      }
-    );
-  }
+  // Import transforms
+  Object.keys(transforms).forEach((transformName) => {
+    eleventyConfig.addTransform(transformName, transforms[transformName]);
+  });
 
   // We will use the .eleventyignore instead
   eleventyConfig.setUseGitIgnore(false);
