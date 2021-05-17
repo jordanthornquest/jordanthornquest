@@ -1,4 +1,5 @@
 module.exports = {
+  mode: "jit",
   purge: ["./src/**/*.11ty.js"],
   darkMode: "media",
   theme: {
