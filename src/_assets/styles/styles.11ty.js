@@ -32,7 +32,7 @@ module.exports = class {
           path.join(__dirname, `/${data.assets.cssEntryFile}`),
       },
       // This is where the CSS output will go
-      permalink: (data) => `/styles/styles.${data.assets.generatedCssHash}.css`,
+      permalink: (data) => `/styles/styles.${data.assets.hashString}.css`,
     };
   }
 
