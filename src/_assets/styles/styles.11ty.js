@@ -1,6 +1,3 @@
-// Entry file name
-const ENTRY_FILE_NAME = "styles.css";
-
 // Use fs to read and write CSS files
 const fs = require("fs");
 
@@ -20,16 +17,16 @@ const tailwindcss = require("tailwindcss");
 module.exports = class {
   // Define data for use in render()
   async data() {
-    // Create path to styles.css
-    const entryPath = path.join(__dirname, `/${ENTRY_FILE_NAME}`);
-
     // Return data to use for rendering
     return {
       // Don't include this file in collections
       eleventyExcludeFromCollections: true,
-      entryPath,
+      eleventyComputed: {
+        entryPath: (data) =>
+          path.join(__dirname, `/${data.assets.cssEntryFile}`),
+      },
       // This is where the CSS output will go
-      permalink: `/styles/styles.css`,
+      permalink: (data) => `/styles/styles.css`,
     };
   }
 

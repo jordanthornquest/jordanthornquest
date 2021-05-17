@@ -1,4 +1,4 @@
-// Commonly used constants
+// Top level <head> data
 module.exports = {
   siteUrl: "https://jordanthornquest.com",
   socialImage:
