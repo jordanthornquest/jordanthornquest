@@ -20,7 +20,7 @@ const pageData = {
 };
 
 // Create page data and render class
-class Home {
+module.exports = class {
   // Assign data for page
   async data() {
     return pageData;
@@ -30,7 +30,4 @@ class Home {
   async render() {
     return renderToString(pageContents);
   }
-}
-
-// Export class to Eleventy
-module.exports = Home;
+};
