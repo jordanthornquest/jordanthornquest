@@ -24,7 +24,7 @@ module.exports = async function () {
             alt="Me, standing against an orange background, leaning forward."
           />
         </picture>
-        <header class="max-w-sm mt-6 text-center">
+        <header class="max-w-sm mt-6 text-center lg:text-left">
           <h1 class="font-bold lg:text-6xl text-5xl">Workin' on it.</h1>
           <p class="leading-normal mt-5 text-xl">
             We're currently under construction, be back soon. In the meantime,
