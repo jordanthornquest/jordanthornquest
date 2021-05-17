@@ -2,7 +2,7 @@
 const htmlmin = require("html-minifier");
 
 // Export transform to Eleventy
-module.exports = function (content, outputPath) {
+module.exports = async function (content, outputPath) {
   // Minify HTML on build
   // Don't minify on development, since it's slow
   if (process.env.NODE_ENV === "production") {
