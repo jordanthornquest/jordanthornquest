@@ -7,6 +7,9 @@ const path = require("path");
 // Use PostCSS for CSS processing
 const postcss = require("postcss");
 
+// Use postcss-import for file breakup
+const postCssImport = require("postcss-import");
+
 // Autoprefixer plugin for browser compatibility
 const autoprefixer = require("autoprefixer");
 
@@ -37,10 +40,11 @@ module.exports = class {
       const rawCss = fs.readFileSync(entryPath);
 
       // Process raw CSS with PostCSS
-      const processedCss = await postcss([autoprefixer, tailwindcss]).process(
-        rawCss,
-        { from: entryPath }
-      );
+      const processedCss = await postcss([
+        postCssImport,
+        autoprefixer,
+        tailwindcss,
+      ]).process(rawCss, { from: entryPath });
 
       // Get the processed CSS string
       const result = processedCss.css;
