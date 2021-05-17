@@ -1,6 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: ["./src/**/*.11ty.js"],
+  purge: ["./src/**/*.11ty.js", "./src/_components/**/*.js"],
   darkMode: "media",
   theme: {
     colors: {
