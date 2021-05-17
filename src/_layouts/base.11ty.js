@@ -54,23 +54,31 @@ module.exports = class {
       <!DOCTYPE html>
       <html class="no-js text-gray-900 dark:text-gray-100" lang="en">
         <head>
+          <!-- Start with these -->
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+          <!-- The basics -->
           <title>${pageTitle}</title>
-          <meta property="og:title" content="${pageTitle}" />
-
           <meta name="description" content="${description}" />
-          <meta property="og:description" content="${description}" />
-
           <link rel="canonical" href="${pageFullUrl}" />
-          <meta property="og:url" content="${pageFullUrl}" />
 
+          <!-- Facebook Open Graph -->
+          <meta property="og:title" content="${pageTitle}" />
+          <meta property="og:description" content="${description}" />
+          <meta property="og:url" content="${pageFullUrl}" />
           <meta property="og:image" content="${socialImage}" />
           <meta property="og:locale" content="en_US" />
           <meta property="og:type" content="${ogType}" />
+
+          <!-- Twitter Open Graph -->
+          <meta name="twitter:url" content="${pageFullUrl}" />
+          <meta name="twitter:title" content="${pageTitle}" />
+          <meta name="twitter:description" content="${description}" />
+          <meta name="twitter:image" content="${socialImage}" />
           <meta name="twitter:card" content="summary_large_image" />
 
+          <!-- Icons -->
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -113,6 +121,7 @@ module.exports = class {
           </script>
         </head>
 
+        <!-- Site content -->
         <body class="bg-gray-50 dark:bg-gray-900">
           ${unsafeHTML(content)}
         </body>
