@@ -13,6 +13,6 @@
   }
 
   a {
-    @apply text-blue underline hover:text-blue-lighter dark:text-blue-lighter dark:hover:text-blue-lightest;
+    @apply underline text-blue hover:text-blue-lighter dark:text-blue-lighter dark:hover:text-blue-lightest;
   }
 }
