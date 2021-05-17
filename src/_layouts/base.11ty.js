@@ -35,6 +35,7 @@ module.exports = class {
 
   // Render the page
   async render({
+    assets,
     content,
     description,
     ogType,
@@ -45,6 +46,9 @@ module.exports = class {
   }) {
     // Get page url
     const pagePath = page.url;
+
+    // Get CSS hash
+    const generatedCssHash = assets.generatedCssHash;
 
     // Get page title
     const pageTitle = await this.titleBuilder(pagePath, title);
@@ -112,7 +116,10 @@ module.exports = class {
           />
 
           <!-- CSS -->
-          <link href="/styles/styles.css" rel="stylesheet" />
+          <link
+            href="/styles/styles.${generatedCssHash}.css"
+            rel="stylesheet"
+          />
 
           <!-- Check if JS is available -->
           <script type="module">
