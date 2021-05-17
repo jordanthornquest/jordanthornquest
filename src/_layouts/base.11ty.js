@@ -51,7 +51,7 @@ module.exports = class {
     // Lit-HTML output
     const layoutTemplate = html`
       <!DOCTYPE html>
-      <html class="no-js text-gray-900 dark:text-gray-100" lang="en">
+      <html class="no-js text-gray-950 dark:text-gray-50" lang="en">
         <head>
           <!-- Start with these -->
           <meta charset="utf-8" />
