@@ -17,8 +17,8 @@ module.exports = class {
       description:
         "Jordan Thornquest maps his mindstate with theatrical relish & a form of punk-informed power pop that's both candidly introspective and fearlessly extroverted.",
       eleventyComputed: {
-        pageFullUrl: (data) => urlJoin(data.constants.siteUrl, data.page.url),
-        socialImage: (data) => data.constants.socialImage,
+        pageFullUrl: (data) => urlJoin(data.head.siteUrl, data.page.url),
+        socialImage: (data) => data.head.socialImage,
       },
       ogType: "website",
     };
