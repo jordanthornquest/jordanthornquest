@@ -7,6 +7,9 @@ const path = require("path");
 // Use PostCSS for CSS processing
 const postcss = require("postcss");
 
+// Use CleanCSS for minification
+const CleanCSS = require("clean-css");
+
 // Use postcss-import for file breakup
 const postCssImport = require("postcss-import");
 
@@ -56,11 +59,27 @@ module.exports = class {
     }
   }
 
+  // Minify CSS on production
+  async minify(css) {
+    return new Promise((resolve, reject) => {
+      if (process.env.NODE_ENV === "production") {
+        const minified = new CleanCSS().minify(css);
+        if (!minified.styles) {
+          return reject(minified.error);
+        }
+        resolve(minified.styles);
+      } else {
+        resolve(css);
+      }
+    });
+  }
+
   // Process raw CSS with PostCSS and return the result as a string
   async render({ entryPath }) {
     try {
       const css = await this.compile(entryPath);
-      return css;
+      const result = await this.minify(css);
+      return result;
     } catch (error) {
       console.error(error);
     }
