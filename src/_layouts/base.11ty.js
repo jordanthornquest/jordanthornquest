@@ -7,7 +7,7 @@ const {
 } = require("@popeindustries/lit-html-server/directives/unsafe-html.js");
 
 // Import path for building pageFullUrl
-const path = require("path");
+const urlJoin = require("url-join");
 
 // Export class for layout rendering
 module.exports = class {
@@ -17,7 +17,7 @@ module.exports = class {
       description:
         "Jordan Thornquest maps his mindstate with theatrical relish & a form of punk-informed power pop that's both candidly introspective and fearlessly extroverted.",
       eleventyComputed: {
-        pageFullUrl: (data) => path.join(data.constants.siteUrl, data.page.url),
+        pageFullUrl: (data) => urlJoin(data.constants.siteUrl, data.page.url),
         socialImage: (data) => data.constants.socialImage,
       },
       ogType: "website",
@@ -95,8 +95,22 @@ module.exports = class {
           />
           <meta name="theme-color" content="#F75E3C" />
 
+          <!-- RSS -->
+          <link
+            type="application/atom+xml"
+            rel="alternate"
+            href="/feed.xml"
+            title="Jordan Thornquest"
+          />
+
           <!-- CSS -->
           <link href="/styles/styles.css" rel="stylesheet" />
+
+          <!-- Check if JS is available -->
+          <script type="module">
+            document.documentElement.classList.remove("no-js");
+            document.documentElement.classList.add("js");
+          </script>
         </head>
 
         <body class="bg-gray-50 dark:bg-gray-900">
