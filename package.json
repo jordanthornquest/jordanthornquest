@@ -11,7 +11,8 @@
     "postcss": "^8.2.10",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^2.1.0"
+    "tailwindcss": "^2.1.0",
+    "url-join": "^4.0.1"
   },
   "scripts": {
     "start": "npm run clean && npm run watch:site",
