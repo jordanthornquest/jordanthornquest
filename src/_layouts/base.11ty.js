@@ -1,5 +1,5 @@
 // Import lit-html-server to render templates
-const { html, renderToBuffer } = require("@popeindustries/lit-html-server");
+const { html, renderToString } = require("@popeindustries/lit-html-server");
 
 // Import path for building pageFullUrl
 const urlJoin = require("url-join");
@@ -131,7 +131,7 @@ module.exports = class {
     `;
 
     // Render Lit-HTML content to string
-    const renderedLayout = await renderToBuffer(layoutTemplate);
+    const renderedLayout = await renderToString(layoutTemplate);
 
     // Return rendered layout
     return renderedLayout;
