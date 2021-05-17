@@ -1,33 +1,28 @@
 // Import lit-html-server to render templates
-const { html, renderToString } = require("@popeindustries/lit-html-server");
-
-// Contents for the page
-const pageContents = html`
-  <main class="container mt-5">
-    <h1>Reconstructing, be back soon.</h1>
-    <p class="mt-2">
-      For the time being, check out my
-      <a href="https://music.jordanthornquest.com">Bandcamp</a>. See you
-      shortly!
-    </p>
-  </main>
-`;
-
-// Data for the page
-const pageData = {
-  layout: "base.11ty.js",
-  title: "Home",
-};
+const { html, renderToBuffer } = require("@popeindustries/lit-html-server");
 
 // Create page data and render class
 module.exports = class {
   // Assign data for page
   async data() {
-    return pageData;
+    return {
+      layout: "base.11ty.js",
+      title: "Home",
+    };
+  }
+
+  async templateBuilder() {
+    return html`
+      <header class="md-5">
+        <h1>Testing even harder</h1>
+      </header>
+    `;
   }
 
   // Render page contents
   async render() {
-    return renderToString(pageContents);
+    const template = await this.templateBuilder();
+    const renderedTemplate = await renderToBuffer(template);
+    return renderedTemplate;
   }
 };

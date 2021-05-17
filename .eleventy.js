@@ -2,7 +2,7 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 // Import components
-// const components = require("./src/_components");
+const components = require("./src/_components");
 
 // Import transforms
 const transforms = require("./src/_utils/transforms");
@@ -16,9 +16,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
 
   // Import components
-  // Object.keys(components).forEach((componentName) => {
-  //   eleventyConfig.addShortcode(componentName, components[componentName]);
-  // });
+  Object.keys(components).forEach((componentName) => {
+    eleventyConfig.addShortcode(componentName, components[componentName]);
+  });
 
   // Import transforms
   Object.keys(transforms).forEach((transformName) => {
