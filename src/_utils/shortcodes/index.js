@@ -1,5 +1,5 @@
 // Import components
-const homeHero = require("./homeHero");
+const homeHero = require("./components/homeHero");
 
 module.exports = {
   homeHero,
