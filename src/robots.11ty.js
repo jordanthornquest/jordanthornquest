@@ -19,7 +19,7 @@ module.exports = class {
       User-agent: *
       Allow: /
 
-      Sitemap: http://www.jordanthornquest.com/sitemap.xml
+      Sitemap: ${head.siteUrl}/sitemap.xml
     `;
   }
 };
