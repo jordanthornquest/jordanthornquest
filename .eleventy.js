@@ -1,8 +1,19 @@
 // RSS plugin for generating feeds from data
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
-// Import components
-const components = require("./src/_components");
+// Sitemap plugin
+const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+const sitemapConfig = {
+  sitemap: {
+    hostname: "https://example.com",
+  },
+};
+
+// siteUrl constant for URL
+const { siteUrl } = require("./src/_data/head");
+
+// Import shortcodes
+const shortcodes = require("./src/_utils/shortcodes");
 
 // Import transforms
 const transforms = require("./src/_utils/transforms");
@@ -12,12 +23,13 @@ module.exports = function (eleventyConfig) {
   // Copy static files to output
   eleventyConfig.addPassthroughCopy({ "./src/_static/": "./static/" });
 
-  // Add RSS plugin
+  // Add plugins
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(sitemap, sitemapConfig);
 
   // Import components
-  Object.keys(components).forEach((componentName) => {
-    eleventyConfig.addShortcode(componentName, components[componentName]);
+  Object.keys(shortcodes).forEach((shortcodeName) => {
+    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName]);
   });
 
   // Import transforms
