@@ -22,7 +22,7 @@
     "start": "npm run clean && npm run watch:site",
     "build": "npm run clean && npm run build:site",
     "build:site": "NODE_ENV=production npx @11ty/eleventy",
-    "clean": "npx rimraf ./dist/ ./.cache/",
+    "clean": "npx rimraf ./dist/",
     "watch:site": "NODE_ENV=development npx @11ty/eleventy --serve"
   },
   "repository": {
