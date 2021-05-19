@@ -5,8 +5,10 @@ const { html, renderToBuffer } = require("@popeindustries/lit-html-server");
 module.exports = class {
   // Assign data for page
   async data() {
+    // Explicitly name permalink to avoid subfolder output
     return {
       layout: "base.11ty.js",
+      permalink: "/404.html",
       title: "Oh fuck",
     };
   }
