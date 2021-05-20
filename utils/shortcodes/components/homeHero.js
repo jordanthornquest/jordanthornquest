@@ -14,13 +14,13 @@ module.exports = async function () {
         >
           <source
             srcset="
-              https://res.cloudinary.com/deedobzcr/image/upload/c_scale,w_1600/v1621234913/Me/him-transparent.webp
+              https://res.cloudinary.com/jordanthornquest/image/upload/c_scale,w_1600/v1621234913/Me/him-transparent.webp
             "
             media="(min-width: 1024px)"
           />
           <img
             class="rounded-full lg:h-auto lg:min-w-full lg:rounded-none lg:object-cover lg:object-top"
-            src="https://res.cloudinary.com/deedobzcr/image/upload/v1621231501/Me/him-transparent-crop.webp"
+            src="https://res.cloudinary.com/jordanthornquest/image/upload/v1621231501/Me/him-transparent-crop.webp"
             alt="Me, standing against an orange background, leaning forward."
           />
         </picture>
