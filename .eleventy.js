@@ -13,10 +13,10 @@ const sitemapConfig = {
 const { siteUrl } = require("./src/_data/head");
 
 // Import shortcodes
-const shortcodes = require("./src/_utils/shortcodes");
+const shortcodes = require("./utils/shortcodes");
 
 // Import transforms
-const transforms = require("./src/_utils/transforms");
+const transforms = require("./utils/transforms");
 
 // Export configuration
 module.exports = function (eleventyConfig) {
