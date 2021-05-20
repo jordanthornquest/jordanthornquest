@@ -1,5 +1,5 @@
 # Jordan Thornquest
 
-**24 • He/Him • Gay. Noodler & doodler.**
+**24 • He/Him • Gay. Guitar noodler & wannabe doodler.**
 
 A musician, happily. A developer, regrettably.
