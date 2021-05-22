@@ -7,7 +7,7 @@ module.exports = async function () {
   const hero = html`
     <section class="bg-orange flex flex-row justify-center">
       <div
-        class="flex flex-col items-center lg:flex-row max-w-screen-xl min-h-screen justify-center lg-5 pt-8 pb-16 lg:pb-0 px-5 lg:pl-0 lg:pr-8 text-gray-950"
+        class="flex flex-col items-center lg:flex-row max-w-screen-xl min-h-screen justify-center lg-5 pt-8 pb-16 lg:pb-0 px-5 lg:pl-0 lg:pr-8 text-gray-900"
       >
         <picture
           class="flex lg:h-[500px] max-w-sm lg:max-w-none w-full lg:w-2/3"
@@ -30,7 +30,7 @@ module.exports = async function () {
             We're currently under construction, be back soon. In the meantime,
             check out my
             <a
-              class="text-gray-950 hover:text-gray-900"
+              class="text-gray-900 hover:text-blue-900"
               href="https://music.jordanthornquest.com"
               >Bandcamp.</a
             >

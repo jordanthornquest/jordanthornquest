@@ -22,7 +22,7 @@ module.exports = class {
   // Check current page url for page title
   async titleBuilder(url, title) {
     if (url == "/") {
-      return "Jordan Thornquest";
+      return "It's Jordan Thornquest!";
     } else {
       return `${title} | Jordan Thornquest`;
     }
@@ -51,7 +51,7 @@ module.exports = class {
     // Lit-HTML output
     const layoutTemplate = html`
       <!DOCTYPE html>
-      <html class="no-js text-gray-950 dark:text-gray-50" lang="en">
+      <html class="text-gray-900 dark:text-gray-50" lang="en">
         <head>
           <!-- Start with these -->
           <meta charset="utf-8" />
