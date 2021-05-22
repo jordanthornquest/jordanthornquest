@@ -22,9 +22,9 @@
   "scripts": {
     "start": "yarn run clean && yarn run watch:site",
     "build": "yarn run clean && yarn run build:site",
-    "build:site": "NODE_ENV=production yarn @11ty/eleventy",
+    "build:site": "NODE_ENV=production yarn eleventy",
     "clean": "yarn rimraf ./dist/",
-    "watch:site": "NODE_ENV=development yarn @11ty/eleventy --serve"
+    "watch:site": "NODE_ENV=development yarn eleventy --serve"
   },
   "repository": "git+https://github.com/jordanthornquest/jordanthornquest.git",
   "keywords": [],
