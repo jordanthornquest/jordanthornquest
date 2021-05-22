@@ -18,7 +18,7 @@ module.exports = class {
       <main class="container">
         <img
           alt="A fearsome dog-like creature sits on a mattress, its eyes glowing fearfully."
-          class="mt-10"
+          class="mt-10 max-w-md"
           src="https://res.cloudinary.com/jordanthornquest/image/upload/c_scale,w_1000/v1621403580/Dog/run.webp"
         />
         <h1 class="mt-5">Bad news dude</h1>
