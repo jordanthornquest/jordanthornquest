@@ -20,18 +20,15 @@
     "url-join": "^4.0.1"
   },
   "scripts": {
-    "start": "npm run clean && npm run watch:site",
-    "build": "npm run clean && npm run build:site",
-    "build:site": "NODE_ENV=production npx @11ty/eleventy",
-    "clean": "npx rimraf ./dist/",
-    "watch:site": "NODE_ENV=development npx @11ty/eleventy --serve"
+    "start": "yarn run clean && yarn run watch:site",
+    "build": "yarn run clean && yarn run build:site",
+    "build:site": "NODE_ENV=production yarn @11ty/eleventy",
+    "clean": "yarn rimraf ./dist/",
+    "watch:site": "NODE_ENV=development yarn @11ty/eleventy --serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jordanthornquest/jordanthornquest.git"
-  },
+  "repository": "git+https://github.com/jordanthornquest/jordanthornquest.git",
   "keywords": [],
-  "author": "",
+  "author": "Jordan Thornquest <1444819+jordanthornquest@users.noreply.github.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jordanthornquest/jordanthornquest/issues"
