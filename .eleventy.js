@@ -37,6 +37,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addTransform(transformName, transforms[transformName]);
   });
 
+  // Watch asset files beyond .11ty.js files
+  eleventyConfig.addWatchTarget("./src/_assets/");
+
   // We will use the .eleventyignore instead
   eleventyConfig.setUseGitIgnore(false);
 
