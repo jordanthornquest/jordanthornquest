@@ -123,6 +123,12 @@ module.exports = class {
         <!-- Site content -->
         <body class="bg-gray-50 dark:bg-gray-900">
           ${content}
+
+          <script
+            async
+            defer
+            src="/javascript/scripts.${hashString}.js"
+          ></script>
         </body>
       </html>
     `;
