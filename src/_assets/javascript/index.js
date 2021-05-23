@@ -1,1 +1,2 @@
-import "./yo";
+// Import Alpine
+import "alpinejs";
