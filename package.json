@@ -7,6 +7,7 @@
     "@11ty/eleventy-plugin-rss": "^1.1.1",
     "@popeindustries/lit-html-server": "^3.1.0",
     "@quasibit/eleventy-plugin-sitemap": "^2.1.4",
+    "alpinejs": "^2.8.2",
     "autoprefixer": "^10.2.5",
     "clean-css": "^4.2.3",
     "html-minifier": "^4.0.0",
