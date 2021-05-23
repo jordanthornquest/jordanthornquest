@@ -76,12 +76,8 @@ module.exports = class {
 
   // Process raw CSS with PostCSS and return the result as a string
   async render({ entryPath }) {
-    try {
-      const css = await this.compile(entryPath);
-      const result = await this.minify(css);
-      return result;
-    } catch (error) {
-      console.error(error);
-    }
+    const css = await this.compile(entryPath);
+    const result = await this.minify(css);
+    return result;
   }
 };
