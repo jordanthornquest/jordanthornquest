@@ -12,7 +12,12 @@ module.exports = class {
   }
 
   async templateBuilder() {
-    return html`${this.homeHero()}`;
+    return html`
+      <main>
+        <section>
+        </section>
+      </main>
+    `;
   }
 
   // Render page contents
