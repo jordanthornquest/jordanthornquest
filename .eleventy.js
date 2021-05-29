@@ -9,9 +9,6 @@ const sitemapConfig = {
   },
 };
 
-// siteUrl constant for URL
-const { siteUrl } = require("./src/_data/head");
-
 // Import shortcodes
 const shortcodes = require("./utils/shortcodes");
 
@@ -22,6 +19,10 @@ const transforms = require("./utils/transforms");
 module.exports = function (eleventyConfig) {
   // Copy static files to output
   eleventyConfig.addPassthroughCopy({ "./src/_static/": "./static/" });
+
+  // Copy image files to output
+  // These will be handled with Netlify Large Media in production
+  eleventyConfig.addPassthroughCopy({ "./src/_assets/images/": "./images/" });
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);

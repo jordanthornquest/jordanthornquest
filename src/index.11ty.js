@@ -15,6 +15,12 @@ module.exports = class {
     return html`
       <main>
         <section>
+          <picture>
+            <img
+              alt="A photo of me, leaning forward, staring at the camera in a leather jacket."
+              src="/images/start/who-is-he-square.jpeg"
+            />
+          </picture>
         </section>
       </main>
     `;
