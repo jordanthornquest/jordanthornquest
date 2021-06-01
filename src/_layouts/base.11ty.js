@@ -111,13 +111,10 @@ module.exports = class {
           />
 
           <!-- CSS -->
-          <link href="/_assets/styles/styles.${hashString}.css" rel="stylesheet" />
-
-          <!-- Check if JS is available -->
-          <script type="module">
-            document.documentElement.classList.remove("no-js");
-            document.documentElement.classList.add("js");
-          </script>
+          <link
+            href="/_assets/styles/styles.${hashString}.css"
+            rel="stylesheet"
+          />
         </head>
 
         <!-- Site content -->
