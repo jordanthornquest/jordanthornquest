@@ -81,24 +81,24 @@ module.exports = class {
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/static/apple-touch-icon.png"
+            href="/_static/apple-touch-icon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/static/icons/favicon-32x32.png"
+            href="/_static/icons/favicon-32x32.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/static/icons/favicon-16x16.png"
+            href="/_static/icons/favicon-16x16.png"
           />
-          <link rel="manifest" href="/static/site.webmanifest" />
+          <link rel="manifest" href="/_static/site.webmanifest" />
           <meta
             name="msapplication-config"
-            content="/static/browserconfig.xml"
+            content="/_static/browserconfig.xml"
           />
           <meta name="theme-color" content="#F75E3C" />
 
@@ -111,7 +111,7 @@ module.exports = class {
           />
 
           <!-- CSS -->
-          <link href="/styles/styles.${hashString}.css" rel="stylesheet" />
+          <link href="/_assets/styles/styles.${hashString}.css" rel="stylesheet" />
 
           <!-- Check if JS is available -->
           <script type="module">
@@ -127,7 +127,7 @@ module.exports = class {
           <script
             async
             defer
-            src="/javascript/scripts.${hashString}.js"
+            src="/_assets/javascript/scripts.${hashString}.js"
           ></script>
         </body>
       </html>
