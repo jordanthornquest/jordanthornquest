@@ -17,12 +17,14 @@ const transforms = require("./utils/transforms");
 
 // Export configuration
 module.exports = function (eleventyConfig) {
-  // Copy static files to output
-  eleventyConfig.addPassthroughCopy({ "./src/_static/": "./static/" });
+  // Copy static directory to output
+  // Use _static/ in output to avoid path conflicts
+  eleventyConfig.addPassthroughCopy({"./static/":"./_static/"});
 
-  // Copy image files to output
-  // These will be handled with Netlify Large Media in production
-  eleventyConfig.addPassthroughCopy({ "./src/_assets/images/": "./images/" });
+  // Copy image files in input to output
+  eleventyConfig.addPassthroughCopy("./src/**/*.jpeg");
+  eleventyConfig.addPassthroughCopy("./src/**/*.jpg");
+  eleventyConfig.addPassthroughCopy("./src/**/*.png");
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
@@ -38,19 +40,16 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addTransform(transformName, transforms[transformName]);
   });
 
-  // Watch asset files beyond .11ty.js files
+  // Watch asset directories
   eleventyConfig.addWatchTarget("./src/_assets/");
-
-  // We will use the .eleventyignore instead
-  eleventyConfig.setUseGitIgnore(false);
 
   // Return configuration object
   return {
     dir: {
-      data: "./_data",
-      includes: "./_includes",
+      data: "./_data", // Relative to input folder
+      includes: "./_includes", // Relative to input folder
       input: "./src",
-      layouts: "./_layouts",
+      layouts: "./_layouts", // Relative to input folder
       output: "./dist",
     },
   };
