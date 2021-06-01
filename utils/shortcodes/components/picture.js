@@ -1,6 +1,9 @@
 // Import lit-html-server to render templates
 const { html } = require("@popeindustries/lit-html-server");
 
+// Import imageHelpers
+const { mediaBuilder, sizesBuilder, srcsetBuilder } = require("./imageHelpers");
+
 // Create the <img> tag for the default image
 const defaultImageTagBuilder = async function (defaultImage) {
   // Set default values for defaultImage
@@ -27,33 +30,27 @@ const defaultImageTagBuilder = async function (defaultImage) {
 };
 
 // Create the <source> tag for each responsive option
-const responsiveOptionsBuilder = async function (
-  responsiveOptions,
-  breakpoints
-) {
+const sourceTagsBuilder = async function (sources, breakpoints) {
   // Loop and create additional <source> tags
   const responsiveTags = [];
 
-  for await (let r of responsiveOptions) {
+  for await (let s of sources) {
     // Set default values for responsiveOptions item
-    let { breakpoint, height, hiRes = false, src, width } = r;
+    let { breakpoint, hiRes, src } = s;
 
-    // Get srcset sizes for responsiveOptions item
-    const responsiveValues = await responsiveValuesBuilder(
-      src,
-      breakpoint,
-      breakpoints,
-      hiRes
-    );
+    // Get breakpoint value from Tailwind breakpoints with image's breakpoint key
+    let bpVal = breakpoints[breakpoint];
+
+    // Get srcset, media, and sizes attributes for source
+    let [media, sizes, srcset] = await Promise.all([
+      mediaBuilder(bpVal),
+      sizesBuilder(bpVal),
+      srcsetBuilder(bpVal, hiRes, src),
+    ]);
 
     // Create source tag for item
     let itemSourceTag = html`
-      <source
-        height="${height}"
-        media="(min-width: ${responsiveValues.breakpointValue}px)"
-        srcset="${responsiveValues.srcset}"
-        width="${width}"
-      />
+      <source media="${media}" sizes="${sizes}" srcset="${srcset}" />
     `;
 
     responsiveTags.push(itemSourceTag);
@@ -62,60 +59,13 @@ const responsiveOptionsBuilder = async function (
   return responsiveTags;
 };
 
-// Build out image sizes for <source> tag's srcset attribute
-const responsiveValuesBuilder = async function (
-  src,
-  breakpoint,
-  breakpoints,
-  hiRes
-) {
-  // Define image srcset sizes array
-  const srcsetArray = [];
-
-  // Get breakpoint value from Tailwind breakpoints with image's breakpoint key
-  const breakpointValue = breakpoints[breakpoint];
-
-  // Create srcset image size from breakpoint value
-  const srcsetSize = `${src}?nf_resize=fit&w=${breakpointValue} ${breakpointValue}w`;
-
-  // Push image size
-  srcsetArray.push(srcsetSize);
-
-  // Check if there's a hiRes version of image
-  if (hiRes) {
-    // Hi-res value is twice the value of breakpoint
-    const hiResValue = breakpointValue * 2;
-
-    const hiResSrcset = `${src}?nf_resize=fit&w=${hiResValue} ${hiResValue}w`;
-
-    // Push hi-res image size
-    srcsetArray.push(hiResSrcset);
-  }
-
-  // Convert array to srcset string
-  const srcset = srcsetArray.join(", ");
-
-  // Create object with responsive values
-  const responsiveValues = {
-    breakpointValue: breakpointValue,
-    srcset: srcset,
-  };
-
-  // Return srcset string
-  return responsiveValues;
-};
-
-module.exports = async function (
-  defaultImage,
-  responsiveOptions = [],
-  breakpoints
-) {
+module.exports = async function (defaultImage, sources = [], breakpoints) {
   // Create default image tag and responsive image versions
-  const [defaultImageTag, responsiveTags] = await Promise.all([
+  const [defaultImageTag, sourceTags] = await Promise.all([
     defaultImageTagBuilder(defaultImage),
-    responsiveOptionsBuilder(responsiveOptions, breakpoints),
+    sourceTagsBuilder(sources, breakpoints),
   ]);
 
   // Return complete <picture> tag
-  return html`<picture>${responsiveTags}${defaultImageTag}</picture>`;
+  return html`<picture>${sourceTags}${defaultImageTag}</picture>`;
 };
