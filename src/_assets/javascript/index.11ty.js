@@ -10,11 +10,11 @@ module.exports = class {
     return {
       eleventyComputed: {
         entryPath: (data) =>
-          path.join(__dirname, `/${data.assets.jsEntryFile}`),
+          path.join(__dirname, `./src/${data.assets.jsEntryFile}`),
       },
       eleventyExcludeFromCollections: true,
       // This is where the JavaScript output will go
-      permalink: (data) => `/javascript/scripts.${data.assets.hashString}.js`,
+      permalink: (data) => `/_assets/javascript/scripts.${data.assets.hashString}.js`,
     };
   }
 

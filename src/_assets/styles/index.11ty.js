@@ -29,10 +29,10 @@ module.exports = class {
       eleventyExcludeFromCollections: true,
       eleventyComputed: {
         entryPath: (data) =>
-          path.join(__dirname, `/${data.assets.cssEntryFile}`),
+          path.join(__dirname, `./src/${data.assets.cssEntryFile}`),
       },
       // This is where the CSS output will go
-      permalink: (data) => `/styles/styles.${data.assets.hashString}.css`,
+      permalink: (data) => `/_assets/styles/styles.${data.assets.hashString}.css`,
     };
   }
 
