@@ -6,9 +6,16 @@ const srcsetBuilder = async function (breakpoints, sizes, src) {
   // Create a srcset string for each breakpoint value
   // Add each result to srcset array
   for await (let s of sizes) {
-    // Get breakpoint value from Tailwind breakpoints
-    // Size must be a string with the breakpoint key
-    let bpVal = breakpoints[s];
+    let bpVal;
+
+    if (typeof s === 'string') {
+      // Get breakpoint value from Tailwind breakpoints
+      // Size must be a string with the breakpoint key
+      bpVal = breakpoints[s];
+    } else if (typeof s === 'number') {
+      // bpVal is simply a number value
+      bpVal = s;
+    }
 
     // Create srcset value from breakpoint value and src
     let srcsetValue = `${src}?nf_resize=fit&w=${bpVal} ${bpVal}w`;

@@ -11,7 +11,7 @@ module.exports = class {
           alt: "A photo of me, leaning forward, staring at the camera in a leather jacket.",
           height: 1000,
           src: "/_static/images/who-is-he-square.png",
-          sizes: ["sm"],
+          sizes: [320, "sm"],
           width: 1000,
         },
         sources: [
