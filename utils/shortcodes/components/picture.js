@@ -13,8 +13,11 @@ const defaultImageTagBuilder = async function (breakpoints, defaultImage) {
   // Set default values for defaultImage
   const { alt, height, src, sizes, width } = defaultImage;
 
-  // Get srcsetString from values
-  let srcset = await srcsetBuilder(breakpoints, sizes, src);
+  // Get sizes and srcset attributes for source
+  let [defaultSizes, srcset] = await Promise.all([
+    sizesBuilder(breakpoints, sizes),
+    srcsetBuilder(breakpoints, sizes, src),
+  ]);
 
   // If we have all the required attributes, build the image tag
   if (alt && height && src && width) {
@@ -24,6 +27,7 @@ const defaultImageTagBuilder = async function (breakpoints, defaultImage) {
         decoding="async"
         height="${height}"
         loading="lazy"
+        sizes="${defaultSizes}"
         src="${src}"
         srcset="${srcset}"
         width="${width}"
