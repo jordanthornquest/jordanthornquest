@@ -6,22 +6,27 @@ module.exports = class {
   // Assign data for page
   async data() {
     return {
-      landingImage: {
+      landingPicture: {
         default: {
           alt: "A photo of me, leaning forward, staring at the camera in a leather jacket.",
-          height: 1000,
+          height: 500,
           src: "/_static/images/who-is-he-square.jpeg",
-          width: 1000,
+          width: 500,
         },
-        responsive: [
+        sources: [
           {
             breakpoint: "md",
-            height: 816,
-            hiRes: true,
+            sizes: ["md", "lg", "xl"],
             src: "/_static/images/who-is-he-16-9.jpeg",
-            width: 1462,
           },
         ],
+      },
+      landingImage: {
+        alt: "A photo of me, leaning forward, staring at the camera in a leather jacket.",
+        height: 500,
+        sizes: ["sm", "md", "lg", "xl"],
+        src: "/_static/images/who-is-he-square.jpeg",
+        width: 500,
       },
       layout: "base.11ty.js",
       title: "Home",
@@ -29,18 +34,13 @@ module.exports = class {
   }
 
   // Render page contents
-  async render({ landingImage, tailwind }) {
-    // Get Tailwind breakpoints
-    const { breakpoints } = tailwind;
+  async render({ landingImage, landingPicture, tailwind }) {
     // Return the template
     return html`
       <main>
         <section>
-          ${await this.picture(
-            landingImage.default,
-            landingImage.responsive,
-            breakpoints
-          )}
+          ${await this.picture(tailwind.breakpoints, landingPicture)}
+          ${await this.image(tailwind.breakpoints, landingImage)}
         </section>
       </main>
     `;
