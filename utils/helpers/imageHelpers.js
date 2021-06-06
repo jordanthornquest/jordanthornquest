@@ -31,7 +31,7 @@ const mediaBuilder = async function (bpVal) {
 
 // Build out the sizes attribute for <source> tags
 const sizesBuilder = async function (bpVal) {
-  return `(min-width: ${bpVal}px) ${bpVal}px, 100vw`;
+  return `${bpVal}px`;
 };
 
 module.exports = {
