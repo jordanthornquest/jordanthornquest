@@ -2,7 +2,11 @@
 const { html } = require("@popeindustries/lit-html-server");
 
 // Import imageHelpers
-const { mediaBuilder, sizesBuilder, srcsetBuilder } = require("./imageHelpers");
+const {
+  mediaBuilder,
+  sizesBuilder,
+  srcsetBuilder,
+} = require("../../helpers/imageHelpers.js");
 
 // Create the <img> tag for the default image
 const defaultImageTagBuilder = async function (defaultImage) {
@@ -30,42 +34,52 @@ const defaultImageTagBuilder = async function (defaultImage) {
 };
 
 // Create the <source> tag for each responsive option
-const sourceTagsBuilder = async function (sources, breakpoints) {
+const sourceTagsBuilder = async function (breakpoints, sources) {
+  // Store all the source tags in an array
+  const sourceTags = [];
+
   // Loop and create additional <source> tags
-  const responsiveTags = [];
-
   for await (let s of sources) {
-    // Set default values for responsiveOptions item
-    let { breakpoint, hiRes, src } = s;
+    // Set default values for source
+    let { breakpoint, sizes, src } = s;
 
-    // Get breakpoint value from Tailwind breakpoints with image's breakpoint key
+    // Get bpVal for source's responsive breakpoint
     let bpVal = breakpoints[breakpoint];
 
     // Get srcset, media, and sizes attributes for source
-    let [media, sizes, srcset] = await Promise.all([
+    let [sourceMedia, sourceSizes, sourceSrcset] = await Promise.all([
       mediaBuilder(bpVal),
       sizesBuilder(bpVal),
-      srcsetBuilder(bpVal, hiRes, src),
+      srcsetBuilder(breakpoints, sizes, src),
     ]);
 
     // Create source tag for item
-    let itemSourceTag = html`
-      <source media="${media}" sizes="${sizes}" srcset="${srcset}" />
+    let sourceTag = html`
+      <source
+        media="${sourceMedia}"
+        sizes="${sourceSizes}"
+        srcset="${sourceSrcset}"
+      />
     `;
 
-    responsiveTags.push(itemSourceTag);
+    // Push source tag to array
+    sourceTags.push(sourceTag);
   }
 
-  return responsiveTags;
+  return sourceTags;
 };
 
-module.exports = async function (defaultImage, sources = [], breakpoints) {
-  // Create default image tag and responsive image versions
-  const [defaultImageTag, sourceTags] = await Promise.all([
-    defaultImageTagBuilder(defaultImage),
-    sourceTagsBuilder(sources, breakpoints),
-  ]);
+module.exports = async function (breakpoints, picture) {
+  try {
+    // Create default image tag and responsive image versions
+    const [defaultImageTag, sourceTags] = await Promise.all([
+      defaultImageTagBuilder(picture.default),
+      sourceTagsBuilder(breakpoints, picture.sources),
+    ]);
 
-  // Return complete <picture> tag
-  return html`<picture>${sourceTags}${defaultImageTag}</picture>`;
+    // Return complete <picture> tag
+    return html`<picture>${sourceTags}${defaultImageTag}</picture>`;
+  } catch (e) {
+    console.error(e);
+  }
 };
