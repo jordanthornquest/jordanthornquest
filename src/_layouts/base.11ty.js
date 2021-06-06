@@ -122,8 +122,8 @@ module.exports = class {
           ${content}
 
           <script
-            async
-            defer
+            async="async"
+            defer="defer"
             src="/_assets/javascript/scripts.${hashString}.js"
           ></script>
         </body>
