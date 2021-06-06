@@ -1,6 +1,7 @@
 {
   "name": "Jordan Thornquest",
   "short_name": "JST",
+  "start_url": "https://www.jordanthornquest.com",
   "icons": [
     {
       "src": "/_static/icons/android-chrome-192x192.png",
