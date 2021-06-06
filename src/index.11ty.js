@@ -10,9 +10,11 @@ module.exports = class {
         css: "place-self-center lg:col-span-2 lg:align-self-center lg:justify-self-end",
         default: {
           alt: "A photo of me, leaning forward, staring at the camera in a leather jacket.",
+          height: 250,
           css: "w-full max-w-sm rounded-full lg:max-w-full lg:rounded-none",
           src: "/_static/images/who-is-he-square.png",
           sizes: [320, "sm"],
+          width: 250
         },
         sources: [
           {

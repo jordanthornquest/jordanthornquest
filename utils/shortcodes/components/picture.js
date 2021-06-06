@@ -11,7 +11,7 @@ const {
 // Create the <img> tag for the default image
 const defaultImageTagBuilder = async function (breakpoints, defaultImage) {
   // Set default values for defaultImage
-  const { alt, css = "", src, sizes } = defaultImage;
+  const { alt, css = "", height, src, sizes, width } = defaultImage;
 
   // Get sizes and srcset attributes for source
   let [defaultSizes, srcset] = await Promise.all([
@@ -20,16 +20,18 @@ const defaultImageTagBuilder = async function (breakpoints, defaultImage) {
   ]);
 
   // If we have all the required attributes, build the image tag
-  if (alt && src) {
+  if (alt && height && src && width) {
     return html`
       <img
         alt="${alt}"
         class="${css}"
         decoding="async"
+        height="${height}"
         loading="lazy"
         sizes="${defaultSizes}"
         src="${src}"
         srcset="${srcset}"
+        width="${width}"
       />
     `;
     // If we're missing anything, throw an error
