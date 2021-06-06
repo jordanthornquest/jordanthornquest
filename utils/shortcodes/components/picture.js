@@ -9,9 +9,12 @@ const {
 } = require("../../helpers/imageHelpers.js");
 
 // Create the <img> tag for the default image
-const defaultImageTagBuilder = async function (defaultImage) {
+const defaultImageTagBuilder = async function (breakpoints, defaultImage) {
   // Set default values for defaultImage
-  const { alt, height, src, width } = defaultImage;
+  const { alt, height, src, sizes, width } = defaultImage;
+
+  // Get srcsetString from values
+  let srcset = await srcsetBuilder(breakpoints, sizes, src);
 
   // If we have all the required attributes, build the image tag
   if (alt && height && src && width) {
@@ -22,6 +25,7 @@ const defaultImageTagBuilder = async function (defaultImage) {
         height="${height}"
         loading="lazy"
         src="${src}"
+        srcset="${srcset}"
         width="${width}"
       />
     `;
@@ -73,7 +77,7 @@ module.exports = async function (breakpoints, picture) {
   try {
     // Create default image tag and responsive image versions
     const [defaultImageTag, sourceTags] = await Promise.all([
-      defaultImageTagBuilder(picture.default),
+      defaultImageTagBuilder(breakpoints, picture.default),
       sourceTagsBuilder(breakpoints, picture.sources),
     ]);
 

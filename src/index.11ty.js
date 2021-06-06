@@ -11,6 +11,7 @@ module.exports = class {
           alt: "A photo of me, leaning forward, staring at the camera in a leather jacket.",
           height: 1000,
           src: "/_static/images/who-is-he-square.png",
+          sizes: ["sm"],
           width: 1000,
         },
         sources: [
@@ -18,11 +19,6 @@ module.exports = class {
             breakpoint: "md",
             sizes: ["md", "lg", "xl"],
             src: "/_static/images/who-is-he-16-9.png",
-          },
-          {
-            breakpoint: "sm",
-            sizes: ["sm"],
-            src: "/_static/images/who-is-he-square.png",
           },
         ],
       },
