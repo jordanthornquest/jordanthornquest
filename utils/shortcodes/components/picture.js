@@ -53,7 +53,7 @@ const sourceTagsBuilder = async function (breakpoints, sources) {
     // Get srcset, media, and sizes attributes for source
     let [sourceMedia, sourceSizes, sourceSrcset] = await Promise.all([
       mediaBuilder(bpVal),
-      sizesBuilder(bpVal),
+      sizesBuilder(breakpoints, sizes),
       srcsetBuilder(breakpoints, sizes, src),
     ]);
 
