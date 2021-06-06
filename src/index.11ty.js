@@ -9,24 +9,22 @@ module.exports = class {
       landingPicture: {
         default: {
           alt: "A photo of me, leaning forward, staring at the camera in a leather jacket.",
-          height: 500,
-          src: "/_static/images/who-is-he-square.jpeg",
-          width: 500,
+          height: 1000,
+          src: "/_static/images/who-is-he-square.png",
+          width: 1000,
         },
         sources: [
           {
             breakpoint: "md",
             sizes: ["md", "lg", "xl"],
-            src: "/_static/images/who-is-he-16-9.jpeg",
+            src: "/_static/images/who-is-he-16-9.png",
+          },
+          {
+            breakpoint: "sm",
+            sizes: ["sm"],
+            src: "/_static/images/who-is-he-square.png",
           },
         ],
-      },
-      landingImage: {
-        alt: "A photo of me, leaning forward, staring at the camera in a leather jacket.",
-        height: 500,
-        sizes: ["sm", "md", "lg", "xl"],
-        src: "/_static/images/who-is-he-square.jpeg",
-        width: 500,
       },
       layout: "base.11ty.js",
       title: "Home",
@@ -34,13 +32,12 @@ module.exports = class {
   }
 
   // Render page contents
-  async render({ landingImage, landingPicture, tailwind }) {
+  async render({ landingPicture, tailwind }) {
     // Return the template
     return html`
       <main>
-        <section>
+        <section class="bg-orange min-h-screen flex items-center justify-center">
           ${await this.picture(tailwind.breakpoints, landingPicture)}
-          ${await this.image(tailwind.breakpoints, landingImage)}
         </section>
       </main>
     `;
