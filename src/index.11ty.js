@@ -7,14 +7,14 @@ module.exports = class {
   async data() {
     return {
       landingPicture: {
-        css: "place-self-center lg:col-span-2 lg:align-self-center lg:justify-self-end",
+        css: "place-self-center lg:align-self-center lg:col-span-2 lg:justify-self-end",
         default: {
           alt: "A photo of me, leaning forward, staring at the camera in a leather jacket.",
-          height: 1000,
-          css: "w-full max-w-sm rounded-full lg:max-w-full lg:rounded-none",
+          height: 300,
+          css: "max-w-xs rounded-full lg:rounded-none lg:max-w-full lg:w-full",
           src: "/_static/images/who-is-he-square.png",
           sizes: [320, "sm"],
-          width: 1000
+          width: 300
         },
         sources: [
           {
