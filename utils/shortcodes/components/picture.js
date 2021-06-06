@@ -28,6 +28,7 @@ const defaultImageTagBuilder = async function (breakpoints, defaultImage) {
         decoding="async"
         height="${height}"
         loading="lazy"
+        sizes="${defaultSizes}"
         src="${src}"
         srcset="${srcset}"
         width="${width}"
