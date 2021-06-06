@@ -11,7 +11,7 @@ const {
 // Create the <img> tag for the default image
 const defaultImageTagBuilder = async function (breakpoints, defaultImage) {
   // Set default values for defaultImage
-  const { alt, height, src, sizes, width } = defaultImage;
+  const { alt, css = "", src, sizes } = defaultImage;
 
   // Get sizes and srcset attributes for source
   let [defaultSizes, srcset] = await Promise.all([
@@ -20,17 +20,16 @@ const defaultImageTagBuilder = async function (breakpoints, defaultImage) {
   ]);
 
   // If we have all the required attributes, build the image tag
-  if (alt && height && src && width) {
+  if (alt && src) {
     return html`
       <img
         alt="${alt}"
+        class="${css}"
         decoding="async"
-        height="${height}"
         loading="lazy"
         sizes="${defaultSizes}"
         src="${src}"
         srcset="${srcset}"
-        width="${width}"
       />
     `;
     // If we're missing anything, throw an error
@@ -48,7 +47,6 @@ const sourceTagsBuilder = async function (breakpoints, sources) {
 
   // Loop and create additional <source> tags
   for await (let s of sources) {
-    // Set default values for source
     let { breakpoint, sizes, src } = s;
 
     // Get bpVal for source's responsive breakpoint
@@ -79,6 +77,7 @@ const sourceTagsBuilder = async function (breakpoints, sources) {
 
 module.exports = async function (breakpoints, picture) {
   try {
+    const { css = "" } = picture;
     // Create default image tag and responsive image versions
     const [defaultImageTag, sourceTags] = await Promise.all([
       defaultImageTagBuilder(breakpoints, picture.default),
@@ -86,7 +85,7 @@ module.exports = async function (breakpoints, picture) {
     ]);
 
     // Return complete <picture> tag
-    return html`<picture>${sourceTags}${defaultImageTag}</picture>`;
+    return html`<picture class="${css}">${sourceTags}${defaultImageTag}</picture>`;
   } catch (e) {
     console.error(e);
   }

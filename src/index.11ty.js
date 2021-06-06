@@ -7,17 +7,17 @@ module.exports = class {
   async data() {
     return {
       landingPicture: {
+        css: "place-self-center lg:col-span-2 lg:align-self-center lg:justify-self-end",
         default: {
           alt: "A photo of me, leaning forward, staring at the camera in a leather jacket.",
-          height: 1000,
+          css: "w-full max-w-sm rounded-full lg:max-w-full lg:rounded-none",
           src: "/_static/images/who-is-he-square.png",
           sizes: [320, "sm"],
-          width: 1000,
         },
         sources: [
           {
-            breakpoint: "md",
-            sizes: ["md", "lg", "xl"],
+            breakpoint: "lg",
+            sizes: ["lg", "xl"],
             src: "/_static/images/who-is-he-16-9.png",
           },
         ],
@@ -29,13 +29,6 @@ module.exports = class {
 
   // Render page contents
   async render({ landingPicture, tailwind }) {
-    // Return the template
-    return html`
-      <main>
-        <section class="bg-orange min-h-screen flex items-center justify-center">
-          ${await this.picture(tailwind.breakpoints, landingPicture)}
-        </section>
-      </main>
-    `;
+    return html`${await this.homeHero(tailwind.breakpoints, landingPicture)}`;
   }
 };
