@@ -62,8 +62,15 @@ const sizesBuilder = async function (breakpoints, sizes) {
     sizesArray.push(sizeValue);
   }
 
+  // Reverse the sizes array for proper loading
+  const reversedSizesArray = sizesArray.reverse();
+
+  // Add a default value
+  const defaultWidth = "100vw";
+  reversedSizesArray.push(defaultWidth);
+
   // Convert all values in srcset array to a single srcset string
-  const sizesString = sizesArray.join(", ");
+  const sizesString = reversedSizesArray.join(", ");
 
   // Return srcset string
   return sizesString;
