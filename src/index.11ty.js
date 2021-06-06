@@ -13,7 +13,7 @@ module.exports = class {
           height: 320,
           css: "rounded-full lg:rounded-none lg:max-w-full lg:w-full",
           src: "/_static/images/who-is-he-square.png",
-          sizes: [320],
+          sizes: [320, "sm"],
           width: 320
         },
         sources: [
